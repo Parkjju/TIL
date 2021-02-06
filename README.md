@@ -9,3 +9,5 @@
 ### 공부 목록
 
 #### Python
+
+-   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/input_print.md)
