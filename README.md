@@ -21,3 +21,7 @@
 -   [Python 기초 - 리스트와 문자열](https://github.com/Parkjju/TIL/blob/master/Python/list_string.md)
 
 -   [Python 기초 - 리스트와 문자열의 함수들](https://github.com/Parkjju/TIL/blob/master/Python/list_function.md)
+
+### Git
+
+-   [free template이용하여 자신만의 github page만들어 배포해보기](https://github.com/Parkjju/TIL/tree/master/Git)
