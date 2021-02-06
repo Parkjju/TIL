@@ -2,7 +2,7 @@
 
 ### type함수
 
-```
+```python
 >>> type(3)
 <class 'int'>
 
@@ -17,7 +17,7 @@
 
 ### int형으로 변환, float형으로 변환
 
-```
+```python
 >>> num=10
 >>> num=float(num)
 >>> print(num)
@@ -33,7 +33,7 @@
 
 -   따라서 input 함수를 통해 입력받는 값을 적절히 변환시키기 위해서는 eval보다는 int나 float를 통해 형 변환을 진행하는 것이 바람직하다.
 
-```
+```python
 >>> height =eval(input("키 정보 입력 : "))     #eval 함수로 변환
 키 정보 입력 : 198.3
 >>> print(height)
@@ -48,7 +48,7 @@
 
 ### 복합 대입 연산자
 
-```
+```python
 >>> num=1
 >>> num = num+1
 >>> print(num)
@@ -63,7 +63,7 @@
 
 ### 소괄호
 
-```
+```python
 >>> print(3+4/2)
 5.0
 

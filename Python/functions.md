@@ -60,7 +60,7 @@
 
 ### main함수 정의를 통해 프로그램의 실행 흐름 담기
 
-```
+```python
     #전달된 매개변수 둘을 더하여 반환해주는 함수
     def adder(num1,num2):
         return num1+num2

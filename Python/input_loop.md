@@ -2,7 +2,7 @@
 
 ### 프로그램 사용자로부터 입력받기
 
-```
+```python
 #input함수로 str변수 선언과 동시에 값을 저장하고 있다.
 >>> str = input("How old are you?: ")
 How old are you?: 24
@@ -11,7 +11,7 @@ How old are you?: 24
 24
 ```
 
-```
+```python
 >>> str1 = input("How old are you?: ")
 How old are you?: 25
 
@@ -32,7 +32,7 @@ How old are you?: 13
 
 ### 입력받은 내용을 숫자로 바꾸려면
 
-```
+```python
 >>> year = input("This year: ")
 This year: 2021
 
@@ -45,7 +45,7 @@ Next year:  2022
 
 ### 강력하지만 위험할 수 있는 eval()함수
 
-```
+```python
 >>> def val():
 	return 1
 
@@ -63,7 +63,7 @@ Next year:  2022
 
 ### 코드의 반복
 
-```
+```python
 >>> for i in [0,1,2]:
 	print(i)
 
@@ -79,7 +79,7 @@ Next year:  2022
 
 ### range함수 이용하여 반복문 작성하기
 
-```
+```python
 #1부터 100까지 더하는 연산 진행
 
 >>> sum = 0
@@ -93,7 +93,7 @@ Next year:  2022
 
 -   range(a,b)로 나타낸 반복 횟수 정보는 a 부터 b-1까지 변수 i에 값을 대입하며 반복을 진행하라는 뜻이다.
 
-```
+```python
 >>> for i in range(3):
 	print("A")
 
