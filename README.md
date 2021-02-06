@@ -6,8 +6,8 @@
 
 2.꾸준하게 공부하는 습관을 기르기 위하여 시작합니다.
 
-### 공부 목록
+## 공부 목록
 
-#### Python
+### Python
 
--   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/input_print.md)
+-   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/input_and_print.md)
