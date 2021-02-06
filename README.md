@@ -13,3 +13,5 @@
 -   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/input_and_print.md)
 
 -   [Python 기초 - 간단한 함수 만들기](https://github.com/Parkjju/TIL/blob/master/Python/functions.md)
+
+-   [Python 기초 - 프로그램 사용자로부터 입력받기 + 코드의 반복](https://github.com/Parkjju/TIL/blob/master/Python/input_loop.md)
