@@ -19,3 +19,5 @@
 -   [Python 기초 - int형 데이터와 float형 데이터](https://github.com/Parkjju/TIL/blob/master/Python/int_float_data.md)
 
 -   [Python 기초 - 리스트와 문자열](https://github.com/Parkjju/TIL/blob/master/Python/list_string.md)
+
+-   [Python 기초 - 리스트와 문자열의 함수들](https://github.com/Parkjju/TIL/blob/master/Python/list_function.md)
