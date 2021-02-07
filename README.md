@@ -25,3 +25,13 @@
 ### Git
 
 -   [free template이용하여 자신만의 github page만들어 배포해보기](https://github.com/Parkjju/TIL/tree/master/Git/github_page.md)
+
+### HTML
+
+-   [HTML 기초](https://github.com/Parkjju/TIL/blob/master/HTML/HTML_begin.md)
+
+### Tools
+
+-   [vscode 단축키 모음 - 2021.02.07](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
+
+-   [vscode prettier 셋업](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_Prettier.md)
