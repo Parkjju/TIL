@@ -36,6 +36,10 @@
 
 -   [CSS 기초](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_begin.md)
 
+### Data structure
+
+- [자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
+
 ### Tools
 
 -   [vscode 단축키 모음 - 2021.02.07](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
