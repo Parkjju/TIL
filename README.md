@@ -22,6 +22,8 @@
 
 -   [Python 기초 - 리스트와 문자열의 함수들](https://github.com/Parkjju/TIL/blob/master/Python/list_function.md)
 
+-   [Python 기초 - True, False, if문과 형제들](https://github.com/Parkjju/TIL/blob/master/Python/TF.md)
+
 ### Git
 
 -   [free template이용하여 자신만의 github page만들어 배포해보기](https://github.com/Parkjju/TIL/tree/master/Git/github_page.md)
@@ -38,7 +40,7 @@
 
 ### Data structure
 
-- [자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
+-   [자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
 
 ### Tools
 
