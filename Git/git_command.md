@@ -70,13 +70,13 @@ $git checkout branch_name
 $cat .git/config
 ```
 
-* 원격저장소 연결 여부 확인
+* 원격저장소 연결 여부 확인</br></br>
 
 ```bash
 $rm -rf .git
 ```
 
-* .git폴더 삭제를 통해 commit이력 및 전체 삭제
+* .git폴더 삭제를 통해 commit이력 및 전체 삭제</br></br>
 
 ```bash
 $vi .git/config
@@ -88,4 +88,4 @@ $vi .git/config
 
 3. 원격저장소에 해당하는 링크를 원하는 링크로 수정하여
 
-4. :wq 입력하여 저장 및 탈출
+4. :wq 입력하여 저장 및 탈출</br></br>
