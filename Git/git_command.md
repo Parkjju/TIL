@@ -62,4 +62,30 @@ $git branch branch_name
 $git checkout branch_name
 ```
 
+
 -   checkout을 통해 브랜치 전환</br></br>
+
+
+```bash
+$cat .git/config
+```
+
+* 원격저장소 연결 여부 확인
+
+```bash
+$rm -rf .git
+```
+
+* .git폴더 삭제를 통해 commit이력 및 전체 삭제
+
+```bash
+$vi .git/config
+```
+
+1. shell을 통해 .git 폴더의 config설정 파일을 들어간다.
+
+2. i를 입력하여 입력모드로 진입한 후
+
+3. 원격저장소에 해당하는 링크를 원하는 링크로 수정하여
+
+4. :wq 입력하여 저장 및 탈출
