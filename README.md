@@ -26,11 +26,13 @@
 
 -   [Python 기초 - while,이중 for루프](https://github.com/Parkjju/TIL/blob/master/Python/for_while_loop.md)
 
+-   [Python 기초 - 튜플과 레인지](https://github.com/Parkjju/TIL/blob/master/Python/tuple_range.md)
+
 ### Git
 
 -   [free template이용하여 자신만의 github page만들어 배포해보기](https://github.com/Parkjju/TIL/tree/master/Git/github_page.md)
 
--   [git 명령어모음 (2021.02.11)](https://github.com/Parkjju/TIL/blob/master/Git/git_command.md)
+-   [git 명령어모음 (2021.02.08)](https://github.com/Parkjju/TIL/blob/master/Git/git_command.md)
 
 ### HTML
 
