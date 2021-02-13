@@ -36,6 +36,10 @@
 -   [Python 기초 - 모듈(Modules)](https://github.com/Parkjju/TIL/blob/master/Python/modules.md)
 
 -   [Python 기초 - 딕셔너리(Dictionary)](https://github.com/Parkjju/TIL/blob/master/Python/dictionary.md)
+
+-   [Python 기초 - 클래스와 객체](https://github.com/Parkjju/TIL/blob/master/Python/class.md)
+
+-   [Python 기초 - 예외처리](https://github.com/Parkjju/TIL/blob/master/Python/unexpect.md)
 </details>
 
 ### Git
