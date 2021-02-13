@@ -12,8 +12,6 @@
 
 <details>
 <summary> Python 기초 </summary>
-숨김
-</details>
 
 -   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/input_and_print.md)
 
@@ -38,6 +36,7 @@
 -   [Python 기초 - 모듈(Modules)](https://github.com/Parkjju/TIL/blob/master/Python/modules.md)
 
 -   [Python 기초 - 딕셔너리(Dictionary)](https://github.com/Parkjju/TIL/blob/master/Python/dictionary.md)
+</details>
 
 ### Git
 
