@@ -28,6 +28,12 @@
 
 -   [Python 기초 - 튜플과 레인지](https://github.com/Parkjju/TIL/blob/master/Python/tuple_range.md)
 
+-   [Python 기초 - 함수에 대한 추가적인 설명: 디폴트 값 등등](https://github.com/Parkjju/TIL/blob/master/Python/functions_add.md)
+
+-   [Python 기초 - 모듈(Modules)](https://github.com/Parkjju/TIL/blob/master/Python/modules.md)
+
+-   [Python 기초 - 딕셔너리(Dictionary)](https://github.com/Parkjju/TIL/blob/master/Python/dictionary.md)
+
 ### Git
 
 -   [free template이용하여 자신만의 github page만들어 배포해보기](https://github.com/Parkjju/TIL/tree/master/Git/github_page.md)
