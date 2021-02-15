@@ -2,6 +2,26 @@
 
 ### CTRL + D를 통해 같은 텍스트 한번에 수정하기
 
-<img src="images/ctrlD.gif" width= "100%" height="100%"></img>
+<img src="images/ctrlD.gif" width= "50%" height="50%"></img>
 
 -   CTRL + D 여러번 입력시 같은 텍스트를 더 찾아서 한번에 묶어줌.
+
+*   CTRL + P : 빠른 파일 열기
+
+*   **Ctrl + shift + P** : 명령어 보기 (팔레트)
+
+*   Ctrl + A : 전체 선택
+
+*   Ctrl + A 로 전체 선택 후 Ctrl + K + F로 자동정렬
+
+*   Ctrl + B : 왼쪽 사이드 바 켜고 끄기
+
+*   Ctrl + J : 하단 패널 켜고 끄기
+
+*   Ctrl + / : 주석 처리 및 해제
+
+*   Option(alt) + shift + up : 줄 또는 단락 복사
+
+*   Option(alt) + Up/Down : 줄 또는 단락 이동
+
+*   Ctrl + Tab : 열려있는 다른 탭 선택하여 이동
