@@ -62,6 +62,6 @@
 
 ### Tools
 
--   [vscode 단축키 모음 - 2021.02.07](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
+-   [vscode 단축키 모음 - 2021.02.15](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
 
 -   [vscode prettier 셋업](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_Prettier.md)
