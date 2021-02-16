@@ -60,6 +60,8 @@
 
 -   [자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
 
+-   [선형 자료구조 - Array,List,Stack,Queue,DQueue](https://github.com/Parkjju/TIL/blob/master/Data_structure/sequential_structure.md)
+
 ### Tools
 
 -   [vscode 단축키 모음 - 2021.02.15](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
