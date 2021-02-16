@@ -257,3 +257,73 @@ def Calculator(exp): # if token in '*+/-':
 
 
 ```
+
+### Queue
+
+-   Queue 자료구조의 연산
+    -   enqueue(val) -> val을 큐의 rear에 삽입
+    -   dequeue() -> 가장 앞쪽에 저장된 값을 삭제 및 리턴
+    -   front() -> 가장 앞쪽에 저장된 값을 (삭제하지 않고) 리턴
+
+```python
+class Queue:
+    def __init__(self):
+        self.items=[] # 데이터 저장 공간
+        self.front_index=0 # 가장 앞 원소의 위치 초기화
+
+    def enqueue(self,val):
+        self.items.append(val) # rear에 데이터 저장
+
+    def dequeue(self):
+        if self.front_index==len(self.items): #Queue 자료구조에서 dqueue연산은 실제 데이터를 삭제하는 것이 아니라 front 인덱스의 이동을 통해 값을 무시하는 것이다.따라서 enqueue로 데이터의 추가 없이 계속된 dequeue를 진행하면 front값이 Queue 공간의 길이값까지 움직이게 된다
+            print("Queue is empty")
+            return None # dequeue할 아이템이 없음
+        else:
+            result_value = self.items[self.front_index] # dequeue대상 값 반환하기 위해 저장
+            self.front_index+=1 # dequeue진행 후 front위치 이동
+            return result_value
+```
+
+-   Queue사용 예) Josephus게임
+    -   Josephus게임은 주어지는 조건으로 게임에 참여하는 인원의 수, 탈락의 기준인 간격 k 두 가지가 있다.
+    -   예를 들어 6명이 게임에 참여하고, k=2로 주어졌다면 1부터 시작하여 6까지 두 번째 사람이 탈락.
+    -   1로부터 2번째인 2탈락 -> 3으로부터 2번째인 4 탈락 ......
+    -   dequeue하여 다시 그 값을 enqueue하는 과정을 k-1 번 반복하고
+        해당 과정을 진행한 뒤에 dequeue를 진행한다. (k번째 기준에 해당하는 사람 탈락!)
+
+```python
+from Queue_python import Queue
+
+
+def Josephus(loop, n):
+    Q = Queue()
+    for i in range(1,n+1):
+        Q.enqueue(i)
+
+    while Q.front_index!=len(Q.items): # Queue공간이 빌 때까지 게임 진행
+        for i in range(loop-1):
+            Q.enqueue(Q.dequeue())
+        result = Q.dequeue()
+
+    return result #Queue 공간을 비워내는 차례의 dequeue값을 저장한 상태의 result
+```
+
+### Deque 덱
+
+-   python에서는 collection모듈에 deque클래스로 덱이 이미 구현되어 있음!
+
+-   rear push -> append, front push -> appendleft
+
+-   rear pop -> pop, front pop -> popleft
+
+-   Deque 사용 예1) Palindrome검사
+    -   Palindrome은 왼쪽부터 읽어도, 오른쪽부터 읽어도 같은 문자열을 말함.
+        -   기러기, radar,madam
+    -   Palindrome checking은 세 방법이 있음
+        1. reversed함수 이용
+        ```python
+        s == ''.join(reversed(s))
+        ```
+        2. i=0, j=n-1부터 진행하여 i==j이거나 i>j일때까지 s[i]==s[j]검사
+        3. deque 이용!
+            - deque에 저장 후 popleft, pop이용하여 같은지 검사
