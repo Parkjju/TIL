@@ -60,7 +60,7 @@
 
 -   [자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
 
--   [선형 자료구조 - Array,List,Stack,Queue,DQueue](https://github.com/Parkjju/TIL/blob/master/Data_structure/sequential_structure.md)
+-   [선형 자료구조 - Array, List, Stack, Queue, Deque](https://github.com/Parkjju/TIL/blob/master/Data_structure/sequential_structure.md)
 
 ### Tools
 
