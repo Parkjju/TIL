@@ -8,7 +8,7 @@
 <greet>HI</greet>
 ```
 
-<img src = "/html.png" width="100%" height="100%"></img>
+<img src = "images/html.png" width="100%" height="100%"></img>
 
 -   만약 greet이라는 태그가 실제 있는 태그였다면 </br> **브라우저가 HI 라는 텍스트를 greet태그에 대한 특정 행동으로 인식했을 것이다.**</br>
 
