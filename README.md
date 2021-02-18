@@ -56,6 +56,8 @@
 -   [Python 중급 - Iterable객체와 Iterator 객체](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/iterable_iterator.md)
 
 -   [Python 중급 - 객체처럼 다뤄지는 함수 그리고 람다](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/lambda.md)
+
+-   [Python 중급 - map&filter](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/map_and_filter.md)
 </details>
 
 ### 📔Git
