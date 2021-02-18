@@ -62,21 +62,19 @@ $git branch branch_name
 $git checkout branch_name
 ```
 
-
 -   checkout을 통해 브랜치 전환</br></br>
-
 
 ```bash
 $cat .git/config
 ```
 
-* 원격저장소 연결 여부 확인</br></br>
+-   원격저장소 연결 여부 확인</br></br>
 
 ```bash
 $rm -rf .git
 ```
 
-* .git폴더 삭제를 통해 commit이력 및 전체 삭제</br></br>
+-   .git폴더 삭제를 통해 commit이력 및 전체 삭제</br></br>
 
 ```bash
 $vi .git/config
@@ -89,3 +87,15 @@ $vi .git/config
 3. 원격저장소에 해당하는 링크를 원하는 링크로 수정하여
 
 4. :wq 입력하여 저장 및 탈출</br></br>
+
+-   로컬 저장소에서 작업 후, 상/하위 폴더 생성하여 해당 폴더에 파일을 옮기고 다시 push하게 되면 git에서는 이를 deleted된 파일로 인식하게된다.
+
+```bash
+$git add -u
+
+$git commit -m "message"
+
+$git push
+```
+
+-   위 코드를 통해 로컬 상태의 파일 구조로 업데이트 해주는 기능? (확실한 서치 필요)
