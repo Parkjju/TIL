@@ -52,6 +52,10 @@
 -   [Python 중급 - 깊은 복사와 얕은 복사](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/deep_shallow_copy.md)
 
 -   [Python 중급 - 리스트 컴프리헨션](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/list_comprehension.md)
+
+-   [Python 중급 - Iterable객체와 Iterator 객체](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/iterable_iterator.md)
+
+-   [Python 중급 - 객체처럼 다뤄지는 함수 그리고 람다](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/lambda.md)
 </details>
 
 ### 📔Git
