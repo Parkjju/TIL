@@ -45,7 +45,7 @@
 <details>
 <summary> Python 중급 </summary>
 
--   [Python 중급 - 레퍼런트 카운트와 가비지 컬렉션](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/reference_count_garbage_collection.md)
+-   [Python 중급 - 레퍼런스 카운트와 가비지 컬렉션](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/reference_count_garbage_collection.md)
 
 -   [Python 중급 - 수정 가능한 객체와 수정 불가능한 객체](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/immutable_mutable.md)
 
