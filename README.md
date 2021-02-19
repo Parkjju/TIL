@@ -87,3 +87,14 @@
 -   [vscode 단축키 모음 - 2021.02.15](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
 
 -   [vscode prettier 셋업](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_Prettier.md)
+
+### Projects
+
+<details>
+<summary> 트레이딩 봇 클론코딩 </summary>
+
+-   [트레이딩 봇 클론코딩 - OT](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/OT.md)
+
+-   [트레이딩 봇 클론코딩 - 개발환경 세팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/devSetting.md)
+
+</details>
