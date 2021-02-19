@@ -88,10 +88,10 @@
 
 -   [vscode prettier 셋업](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_Prettier.md)
 
-### Projects
+### 📝Projects
 
 <details>
-<summary> 트레이딩 봇 클론코딩 </summary>
+<summary> 🐮트레이딩 봇 클론코딩 </summary>
 
 -   [트레이딩 봇 클론코딩 - OT](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/OT.md)
 
