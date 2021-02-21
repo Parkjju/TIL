@@ -529,20 +529,47 @@ header{
 
 -   ::??
 
+*   ::selection{} -> 커서 드래그를 통해 텍스트를 select 했을 때의 스타일 지정
+
 ```html
 <style>
-    input::placeholder {
-        color: green;
-    }
-</style>
-
-<style>
-    input {
-        color: green;
+    p::selection {
+        color: white;
+        background-color: wheat;
     }
 </style>
 ```
 
--   input태그의 placeholder 속성에 대해서만 스타일 지정하기 위해 input::placeholder 구문을 이용함.
+-   ::first-letter -> 첫 글자에 대한 스타일 지정
 
--   ::를 이용하지 않으면 해당 태그에 대해 전부 스타일이 적용됨
+-   ::first-line -> 첫 줄에 대한 스타일 지정
+
+### colors and variables
+
+-   CSS color system
+
+    1. hexadecimal color -> #F123
+
+    2. RGB or rgba(a==투명도) -> rgb(197,93,161), rgba(195,32,132, 0.5)
+
+-   같은 색을 여러 번 이용할 시 매번 복사&붙여넣기? NO!
+
+    -   :root 엘리먼트를 추가 (모든 document의 뿌리가 됨)
+
+    *   custom property!
+
+    *   custom property는 색 뿐만 아니라 다른 것들도 저장 가능함.
+
+```html
+<style>
+    :root {
+        --main-color: #fcce00;
+        --default-border: 1px solid var(--main-color);
+    }
+    p {
+        background-color: var(--main-color);
+    }
+</style>
+```
+
+-   변수 명은 --var-name의 형식으로 선언해야하고, 호출 시에는 var(--var-name)으로 호출해야한다.
