@@ -91,3 +91,44 @@
 ```
 
 -   여러 옵션들을 한번에 transition 적용시키고 싶으면 쉼표를 통해 구분하면 됨! (위의 코드 참고)
+
+### Transformation
+
+-   transform 프로퍼티 - 이미지 등에 대해 전환
+
+-   scaleX, scaleY, matrix, rotateX,Y,Z ... 너무나 많은 옵션들이 존재함.
+
+-   [Transform 프로퍼티 옵션 참고](https://developer.mozilla.org/ko/docs/Web/CSS/transform)
+
+-   Transform 프로퍼티는 transition 프로퍼티와 함께 쓰일 때 진정 cool한 모습을 보인다
+
+```html
+<style>
+    img {
+        border: 10px solid black;
+        border-radius: 50%;
+        transition: all 2s ease-in-out;
+    }
+    img:hover {
+        transform: rotateX(50deg);
+    }
+</style>
+```
+
+-   각도에 대한 단위 -> deg
+
+-   rotate 옵션에 대해 자연스러운 움직임을 부여하기 위해 root 태그에 transition 프로퍼티를 **무조건** 부여하자!
+
+-   기본 transform 옵션들
+
+    1. scale - X, Y기준 늘이기 (Z축은 안됨)
+
+    2. rotate - 회전
+
+    3. translate - 이동
+
+-   CSS로 3D 애니메이션 구현 가능하게 된 것은 브라우저의 진보 + 컴퓨터 GPU의 활용으로 인함!
+
+-   **transform프로퍼티는 다른 요소의 box에 영향을 주지 않는다.** 페이지의 픽셀 차원에서 일어나는 변화이고 box 자체에 대한 변화가 일어나지 않음.
+
+-   따라서 형제 요소가 인식하기를, transform이 일어난 요소에 대해서 그 요소가 제자리에 있는 것으로 인식함.
