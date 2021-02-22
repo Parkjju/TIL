@@ -93,8 +93,15 @@
 <details>
 <summary> 🐮트레이딩 봇 클론코딩 </summary>
 
+<details>
+<summary> chapter1 </summary>
+
 -   [트레이딩 봇 클론코딩 - OT](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/OT.md)
 
 -   [트레이딩 봇 클론코딩 - 개발환경 세팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/devSetting.md)
+
+-   [트레이딩 봇 클론코딩 - 키움증권 Open API, KOA Studio 설치](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter1/OpenAPI.md)
+
+</details>
 
 </details>
