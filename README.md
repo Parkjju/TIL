@@ -70,6 +70,14 @@
 -   [Python 중급 - 튜플의 패킹과 언패킹](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/tuple_packing.md)
 
 -   [Python 중급 - 네임드 튜플](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/named_tuple.md)
+
+-   [Python 중급 - dict의 생성과 zip](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/prod_dict.md)
+
+-   [Python 중급 - dict의 루핑 기술과 컴프리헨션](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/dict_lupin.md)
+
+-   [Python 중급 - 함수 호출과 매개변수 선언에 있어서 \*과 \*\*의 사용 규칙](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/func_star_rule.md)
+
+-   [Python 중급 - dict & defaultdict](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/dict_defaultdict.md)
 </details>
 
 ### 📔Git
