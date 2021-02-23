@@ -110,6 +110,10 @@
 
 -   [트레이딩 봇 클론코딩 - 키움증권 Open API, KOA Studio 설치](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter1/OpenAPI.md)
 
+-   [트레이딩 봇 클론코딩 - 증권사 Open API 봇과 연동](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter2/open_api.md)
+
+-   [트레이딩 봇 클론코딩 - 증권사 Open API 활용하여 일별 종목 데이터 가져오기](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter2/daily_data.md)
+
 </details>
 
 </details>
