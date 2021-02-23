@@ -78,6 +78,8 @@
 
 -   [git 명령어모음 (2021.02.08)](https://github.com/Parkjju/TIL/blob/master/Git/git_command.md)
 
+-   [git 레포지토리 README에 방문자 수 표시하기](https://github.com/Parkjju/TIL/blob/master/Git/hits.md)
+
 ### 📔HTML
 
 -   [HTML 기초](https://github.com/Parkjju/TIL/blob/master/HTML/HTML_begin.md)
