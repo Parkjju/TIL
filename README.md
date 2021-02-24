@@ -96,6 +96,8 @@
 
 -   [CSS 기초](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_begin.md)
 
+-   [CSS 중급](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_Advanced.md)
+
 ### 📔Data structure
 
 -   [자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
