@@ -78,6 +78,14 @@
 -   [Python 중급 - 함수 호출과 매개변수 선언에 있어서 \*과 \*\*의 사용 규칙](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/func_star_rule.md)
 
 -   [Python 중급 - dict & defaultdict](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/dict_defaultdict.md)
+
+-   [Python 중급 - dict & OrderedDict](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/ordered_dict.md)
+
+-   [Python 중급 - 자료형 분류와 set&frozenset](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/set_frozenset.md)
+
+-   [Python 중급 - 정렬 기술](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/sort.md)
+
+-   [Python 중급 - enumerate과 문자열 비교](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/enumerate.md)
 </details>
 
 ### 📔Git
