@@ -132,3 +132,48 @@
 -   **transform프로퍼티는 다른 요소의 box에 영향을 주지 않는다.** 페이지의 픽셀 차원에서 일어나는 변화이고 box 자체에 대한 변화가 일어나지 않음.
 
 -   따라서 형제 요소가 인식하기를, transform이 일어난 요소에 대해서 그 요소가 제자리에 있는 것으로 인식함.
+
+### Animaition part one
+
+-   state에 상관 없이 움직이는 animation?
+
+```html
+<style>
+    @keyframes myAnimate {
+        from {
+            transform: rotateX(0);
+        }
+        to {
+            transform: rotateX(360deg);
+        }
+    }
+    img {
+        border: 10px solid black;
+        border-radius: 50%;
+        animation: myAnimate 5s ease-in-out infinite;
+    }
+</style>
+```
+
+-   @keyframes을 통해 특정 상태에 대한 만족이 없어도 실행되는 애니메이션을 정의한다.
+
+-   from~to의 구조를 가지며, 애니메이션을 적용할 요소에 animation 프로퍼티를 적용한다.
+
+-   infinite 옵션을 animation 프로퍼티에 추가하면 위의 코드를 예시로, 5초 동안 ease-in-out형태로 움직이는 애니메이션이 무한히 반복된다.
+
+```html
+<style>
+    @keyframes name {
+        from {
+            transform: rotateX();
+        }
+        to {
+            transform: rotateX(360deg) translate(100px);
+        }
+    }
+</style>
+```
+
+-   위와 같이 tranform to에서 위치를 옮기는 옵션을 추가하면 애니메이션 한 사이클을 돈 뒤에 처음부터 시작할 때에 툭 끊기는 부자연스러움이 보인다.
+
+### Animation Part two
