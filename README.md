@@ -86,6 +86,14 @@
 -   [Python 중급 - 정렬 기술](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/sort.md)
 
 -   [Python 중급 - enumerate과 문자열 비교](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/enumerate.md)
+
+-   [Python 중급 - 표현식 기반 문자열 조합](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/expression_comb.md)
+
+-   [Python 중급 - 메소드 기반 문자열 조합](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/method_str.md)
+
+-   [Python 중급 - 클래스와 객체의 본질](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/class_obj.md)
+
+-   [Python 중급 - 상속](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/inheritance.md)
 </details>
 
 ### 📔Git
