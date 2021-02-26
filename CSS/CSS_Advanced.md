@@ -177,3 +177,37 @@
 -   위와 같이 tranform to에서 위치를 옮기는 옵션을 추가하면 애니메이션 한 사이클을 돈 뒤에 처음부터 시작할 때에 툭 끊기는 부자연스러움이 보인다.
 
 ### Animation Part two
+
+-   CSS를 통해 브라우저에 애니메이션을 구현하고 싶을 때, keyframes를 이용했었다.
+
+-   하지만 translate를 이용하여 위치 전환을 자연스럽게 하고싶어도 애니메이션 사이클이 한번 돌면 초기화 될 때 jump를 하는 경우가 발생한다.
+
+-   이를 해결하기 위해 애니메이션을 keyframes의 from~to가 아니라 %비율로 나누어 애니메이션화를 진행한다.
+
+```html
+<style>
+    @keyframes superSexyCoinFlip {
+        0% {
+            transform: rotateY(0);
+        }
+        50% {
+            border-radius: 0px;
+            transform: rotateY(180deg) translate(100px);
+            border-color: tomato;
+        }
+        100% {
+            transform: rotateY(0) translate(0);
+        }
+    }
+</style>
+```
+
+-   100% 완료하게 되었을 떄의 애니메이션 상태를 초기 애니메이션 상태 + 중간에 추가된 애니메이션들의 초기 상태 값으로 만들어주면 자연스러운 애니메이션이 만들어진다.
+
+-   [CSS 애니메이션 사이트](https://animista.net/)
+
+-   %의 비율 분할은 자유롭게 진행 가능하다.
+
+-   keyframes 내의 property들은 transform 이외에도 자유롭게 입력 가능하지만, 애니메이션으로 적용이 되지 않는 property들도 존재하기 때문에 transform을 권장한다.
+
+-   100% 애니메이션에 opacity:0 프로퍼티를 넣으면 애니메이션 대상이 자연스럽게 사라지는 연출을 할 수 잇슴.
