@@ -156,6 +156,8 @@
 
 -   [트레이딩 봇 클론코딩 - mySQL, work bench 소개 및 셋업](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter3/mysql.md)
 
+-   [트레이딩 봇 클론코딩 - 쿼리문 사용 방법(select, update, delete, drop,create)](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter3/query.md)
+
 </details>
 
 </details>
