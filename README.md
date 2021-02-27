@@ -160,4 +160,10 @@
 
 </details>
 
+<details>
+<summary> Chapter4 </summary>
+
+-   [트레이딩 봇 클론코딩 - 인터프리터와 IDE (Pycharm 디버거 사용법)](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/interpreter.md)
+</details>
+
 </details>
