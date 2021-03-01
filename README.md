@@ -94,6 +94,10 @@
 -   [Python 중급 - 클래스와 객체의 본질](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/class_obj.md)
 
 -   [Python 중급 - 상속](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/inheritance.md)
+
+-   [Python 중급 - isinstance 함수와 object클래스](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/isinstance.md)
+
+-   [Python 중급 - 스페셜 메소드](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/special_method.md)]
 </details>
 
 ### 📔Git
@@ -164,6 +168,7 @@
 <summary> Chapter4 </summary>
 
 -   [트레이딩 봇 클론코딩 - 인터프리터와 IDE (Pycharm 디버거 사용법)](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/interpreter.md)
+
 </details>
 
 </details>
