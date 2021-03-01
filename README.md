@@ -97,7 +97,7 @@
 
 -   [Python 중급 - isinstance 함수와 object클래스](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/isinstance.md)
 
--   [Python 중급 - 스페셜 메소드](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/special_method.md)]
+-   [Python 중급 - 스페셜 메소드](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/special_method.md)
 </details>
 
 ### 📔Git
