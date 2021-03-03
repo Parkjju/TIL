@@ -43,6 +43,12 @@ This year: 2021
 Next year:  2022
 ```
 
+### 한 번에 두개 입력받기
+
+```python
+>>> a,b = input('문자열 두번 입력하세요').split()
+```
+
 ### 강력하지만 위험할 수 있는 eval()함수
 
 ```python
