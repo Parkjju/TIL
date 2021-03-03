@@ -15,33 +15,33 @@
 <details>
 <summary> Python 기초 </summary>
 
--   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/input_and_print.md)
+-   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/newbie/input_and_print.md)
 
--   [Python 기초 - 간단한 함수 만들기](https://github.com/Parkjju/TIL/blob/master/Python/functions.md)
+-   [Python 기초 - 간단한 함수 만들기](https://github.com/Parkjju/TIL/blob/master/Python/newbie/functions.md)
 
--   [Python 기초 - 프로그램 사용자로부터 입력받기 + 코드의 반복](https://github.com/Parkjju/TIL/blob/master/Python/input_loop.md)
+-   [Python 기초 - 프로그램 사용자로부터 입력받기 + 코드의 반복](https://github.com/Parkjju/TIL/blob/master/Python/newbie/input_loop.md)
 
--   [Python 기초 - int형 데이터와 float형 데이터](https://github.com/Parkjju/TIL/blob/master/Python/int_float_data.md)
+-   [Python 기초 - int형 데이터와 float형 데이터](https://github.com/Parkjju/TIL/blob/master/Python/newbie/int_float_data.md)
 
--   [Python 기초 - 리스트와 문자열](https://github.com/Parkjju/TIL/blob/master/Python/list_string.md)
+-   [Python 기초 - 리스트와 문자열](https://github.com/Parkjju/TIL/blob/master/Python/newbie/list_string.md)
 
--   [Python 기초 - 리스트와 문자열의 함수들](https://github.com/Parkjju/TIL/blob/master/Python/list_function.md)
+-   [Python 기초 - 리스트와 문자열의 함수들](https://github.com/Parkjju/TIL/blob/master/Python/newbie/list_function.md)
 
--   [Python 기초 - True, False, if문과 형제들](https://github.com/Parkjju/TIL/blob/master/Python/TF.md)
+-   [Python 기초 - True, False, if문과 형제들](https://github.com/Parkjju/TIL/blob/master/Python/newbie/TF.md)
 
--   [Python 기초 - while,이중 for루프](https://github.com/Parkjju/TIL/blob/master/Python/for_while_loop.md)
+-   [Python 기초 - while,이중 for루프](https://github.com/Parkjju/TIL/blob/master/Python/newbie/for_while_loop.md)
 
--   [Python 기초 - 튜플과 레인지](https://github.com/Parkjju/TIL/blob/master/Python/tuple_range.md)
+-   [Python 기초 - 튜플과 레인지](https://github.com/Parkjju/TIL/blob/master/Python/newbie/tuple_range.md)
 
--   [Python 기초 - 함수에 대한 추가적인 설명: 디폴트 값 등등](https://github.com/Parkjju/TIL/blob/master/Python/functions_add.md)
+-   [Python 기초 - 함수에 대한 추가적인 설명: 디폴트 값 등등](https://github.com/Parkjju/TIL/blob/master/Python/newbie/functions_add.md)
 
--   [Python 기초 - 모듈(Modules)](https://github.com/Parkjju/TIL/blob/master/Python/modules.md)
+-   [Python 기초 - 모듈(Modules)](https://github.com/Parkjju/TIL/blob/master/Python/newbie/modules.md)
 
--   [Python 기초 - 딕셔너리(Dictionary)](https://github.com/Parkjju/TIL/blob/master/Python/dictionary.md)
+-   [Python 기초 - 딕셔너리(Dictionary)](https://github.com/Parkjju/TIL/blob/master/Python/newbie/dictionary.md)
 
--   [Python 기초 - 클래스와 객체](https://github.com/Parkjju/TIL/blob/master/Python/class.md)
+-   [Python 기초 - 클래스와 객체](https://github.com/Parkjju/TIL/blob/master/Python/newbie/class.md)
 
--   [Python 기초 - 예외처리](https://github.com/Parkjju/TIL/blob/master/Python/unexpect.md)
+-   [Python 기초 - 예외처리](https://github.com/Parkjju/TIL/blob/master/Python/newbie/unexpect.md)
 </details>
 
 <details>
