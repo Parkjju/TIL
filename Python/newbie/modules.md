@@ -116,3 +116,9 @@ math.sin(x)
 from test_package import modu # test_package 안의 modu 모듈을 참조하겠다
 from test_package.modu import func # test_package 안의 modu 모듈로의 func함수를 참조하겠다.
 ```
+
+### **name**이용한 import 구분
+
+-   파이썬 프로그램 실행 시 현재 실행하고 있는 파일의 Special Variable 중 \_ _ name _ \_에 저장되는 값은 무조건 ****main****이다.
+
+-   이에 반해 현재 실행하는 파일로부터 import된 파일의 Special Variable중 name에 저장되는 값은 해당 파일의 이름이다. **main**으로 바뀌지 않는다.
