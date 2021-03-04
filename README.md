@@ -100,6 +100,8 @@
 -   [Python 중급 - 스페셜 메소드](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/special_method.md)
 
 -   [Python 중급 - 연산자 오버로딩](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/operator_overload.md)
+
+-   [Python 중급 - 네스티드 함수와 클로저](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/nested_func.md)
 </details>
 
 ### 📔Git
@@ -170,6 +172,8 @@
 <summary> Chapter4 </summary>
 
 -   [트레이딩 봇 클론코딩 - 인터프리터와 IDE (Pycharm 디버거 사용법)](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/interpreter.md)
+
+-   [트레이딩 봇 클론코딩 - 데이터베이스 연동하기](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/database_on.md)
 
 </details>
 
