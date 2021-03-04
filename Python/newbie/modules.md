@@ -123,7 +123,7 @@ from test_package.modu import func # test_package 안의 modu 모듈로의 func�
 
 -   이에 반해 현재 실행하는 파일로부터 import된 파일의 Special Variable중 name에 저장되는 값은 해당 파일의 이름이다. \_\_main\_\_으로 바뀌지 않는다. -> 'PackageName.UsingModuleName'형태를 저장하게 된다. (패키지 이름.import하는 모듈 이름)
 
-### 파이썬 패키지 설치
+### 파이썬 패키지 설치 - in pycharm
 
 -   파이썬으로 작성된 패키지 소프트웨어를 설치하거나 관리하는 패키지 관리 시스템
 
