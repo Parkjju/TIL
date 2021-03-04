@@ -107,3 +107,12 @@ math.sin(x)
 >>> math.sin(math.pi/4) # math.pi는 파이, 파이는 라디안 단위의 값이므로 라디안 값을 직접 전달하는 셈
 >>> math.sin(math.radians(45)) # 45를 radian 단위로 바꿔서 sin 함수의 인자로 전달
 ```
+
+### 패키지 - 모듈 - 함수로 이어지는 호출관계
+
+```python
+# 사용자 정의 패키지로 test_package라는 이름의 패키지가 있다고 가정하자
+# test_package 패키지 안에는 modu라는 모듈이 존재한다고 가정하자
+from test_package import modu # test_package 안의 modu 모듈을 참조하겠다
+from test_package.modu import func # test_package 안의 modu 모듈로의 func함수를 참조하겠다.
+```
