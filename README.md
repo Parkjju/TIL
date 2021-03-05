@@ -102,6 +102,12 @@
 -   [Python 중급 - 연산자 오버로딩](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/operator_overload.md)
 
 -   [Python 중급 - 네스티드 함수와 클로저](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/nested_func.md)
+
+-   [Python 중급 - 데코레이터](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/decorator.md)
+
+-   [Python 중급 - 클래스 메소드와 static 메소드](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/class_method.md)
+
+-   [Python 중급 - \_\_name\_\_&\_\_main\_\_](https://github.com/Parkjju/TIL/blob/master/Python/middle_class/name_main.md)
 </details>
 
 ### 📔Git
