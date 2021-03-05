@@ -80,15 +80,19 @@ rel = relationsip의 약자로, 링크된 파일과의 관계를 설명
 
 ```css
 header{
-    margin:10px; <!--box 상 하 좌 우 적용-->
+    margin:10px; <!-- box 상 하 좌 우 적용-->
 }
 
 header{
-    margin:10px 15px; <!--상하 & 좌우-->
+    margin:10px 15px; <!-- 상하 & 좌우-->
 }
 
 header{
-    margin: 10px 15px 20px 25px; <!--상하좌우-->
+    margin: 10px 15px 20px; <!-- 첫번째는 상, 두번째는 좌우, 세번째는 하-->
+}
+
+header{
+    margin: 10px 15px 20px 25px; <!-- 상우하좌, 시계방향-->
 }
 ```
 
