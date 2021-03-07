@@ -211,3 +211,61 @@
 -   keyframes 내의 property들은 transform 이외에도 자유롭게 입력 가능하지만, 애니메이션으로 적용이 되지 않는 property들도 존재하기 때문에 transform을 권장한다.
 
 -   100% 애니메이션에 opacity:0 프로퍼티를 넣으면 애니메이션 대상이 자연스럽게 사라지는 연출을 할 수 잇슴.
+
+### Media Query
+
+-   media query란? -> CSS만을 이용해서 스크린 사이즈를 알 수 있는 방법.
+
+-   핸드폰 또는 스크린사이즈가 이 정도 크기라면 어떨지 CSS를 보여주라!
+
+```html
+<style>
+    @media screen and (min-width: 600px) and (max-width: 1200px) {
+        div {
+            background-color: wheat;
+        }
+    }
+</style>
+```
+
+-   스크린 width가 600~1200일 때 div의 background-color를 wheat으로 설정!
+
+```html
+<style>
+    @media screen and (min-width: 601px) and (orientation: landscape) {
+        span {
+            display: none;
+        }
+    }
+</style>
+```
+
+```html
+<body>
+    <span>Please flip Your phone</span>
+</body>
+```
+
+-   span 내의 텍스트를 orientation이 landscape모드일 때 사라지게 하겠다 !
+
+    1. orientation은 화면이 가로 또는 세로모드일 상태를 지정한다.
+
+    2. landscape -> 가로 , portrait -> 세로
+
+*   min-device-width -> (only phone, 데스크탑 브라우저는 이해못함)
+
+*   CSS Media query MDN 검색!!
+
+### media type -> print
+
+```html
+<style>
+    @media print {
+        body {
+            background-color: tomato;
+        }
+    }
+</style>
+```
+
+-   ctrl + p -> 인쇄 상태의 브라우저를 확인

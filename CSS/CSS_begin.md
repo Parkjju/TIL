@@ -8,6 +8,8 @@
 
 rel = relationsip의 약자로, 링크된 파일과의 관계를 설명
 
+3. link:css -> 외부 css파일 참조 뼈대코드 자동생성됨
+
 ### CSS 코드 작성법, 3가지 규칙
 
 1. 셀렉터(selector)가 HTML 태그를 가리킨다.
@@ -285,6 +287,42 @@ header{
     -   colunm-reverse : 나열된 컨텐츠들이 x축 대칭으로 변함
 
     -   row-reverse : 나열된 컨텐츠들이 y축 대칭으로 변환
+
+#### CSS hack
+
+-   **justify-content 프로퍼티의 space-between 값을 이용**
+
+    -   flex로 나열된 컨텐츠들이 좌우로 공평하게 공간을 나누어 나열됨
+
+    -   하지만 각 컨텐츠의 width에 따라 중앙의 컨텐츠가 좌 또는 우 방향으로 치우칠 수도 있다는 문제점이 발생
+
+    -   css hack이용 !
+
+```html
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .myParentclass {
+        width: 33%;
+    }
+
+    .myParentclass__column:nth-child(2) {
+        display: flex;
+        justify-content: center;
+    }
+
+    .myParentclass_column:last-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+</style>
+```
+
+-   3분할된 공간을 공평하게 나누기 위한 작업.
 
 ### Fixed
 
