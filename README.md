@@ -124,6 +124,8 @@
 
 -   [git 레포지토리 README에 방문자 수 표시하기](https://github.com/Parkjju/TIL/blob/master/Git/hits.md)
 
+-   [git ignore설정](https://github.com/Parkjju/TIL/blob/master/Git/gitignore.md)
+
 ### 📔HTML
 
 -   [HTML 기초](https://github.com/Parkjju/TIL/blob/master/HTML/HTML_begin.md)
@@ -133,6 +135,8 @@
 -   [CSS 기초](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_begin.md)
 
 -   [CSS 중급](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_Advanced.md)
+
+-   [CSS Icon, Block Element Modifier, Font](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_additional.md)
 
 ### 📔Data structure
 
