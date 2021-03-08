@@ -101,6 +101,7 @@
 
 -   [210215 / vscode 단축키 모음 - 2021.02.15](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_shortcut.md)
 -   [210207 / vscode prettier 셋업](https://github.com/Parkjju/TIL/blob/master/Tools/vscode_Prettier.md)
+-   [210309 / pycharm 이용하기](https://github.com/Parkjju/TIL/blob/master/Tools/pycharm.md)
 
 ### 📝Projects
 
