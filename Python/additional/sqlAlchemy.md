@@ -17,6 +17,9 @@
 ```python
 $ pip install sqlalchemy
 $ import pymysql
+
+# mysql db 와의 호환을 위해 아래 함수 호출
+$ pymysql.install_as_MySQLdb()
 ```
 
 -   pymysql이란? **Python 전용 데이터베이스 커넥터를 뜻한다.** Python 프로그램이 MYSQL 서버와 통신할 수 있게 만들어주는 라이브러리.
