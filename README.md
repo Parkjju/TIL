@@ -15,7 +15,7 @@
 <details>
 <summary> Python 기초 </summary>
 
--   [Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/newbie/input_and_print.md)
+[20210206/Python 기초 - 입출력과 변수](https://github.com/Parkjju/TIL/blob/master/Python/newbie/input_and_print.md)
 
 -   [Python 기초 - 간단한 함수 만들기](https://github.com/Parkjju/TIL/blob/master/Python/newbie/functions.md)
 
