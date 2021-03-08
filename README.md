@@ -70,7 +70,8 @@
 <details>
 <summary> Python 추가 내용 </summary>
 
--   [Python 데이터 프레임](https://github.com/Parkjju/TIL/blob/master/Python/additional/dataframe.md)
+-   [210306 / Python 데이터 프레임](https://github.com/Parkjju/TIL/blob/master/Python/additional/dataframe.md)
+-   [210308 / Python SQLAlchemy를 통해 mysql 데이터베이스 연동하기](https://github.com/Parkjju/TIL/blob/master/Python/additional/sqlAlchemy.md)
 </details>
 
 ### 📔Git
