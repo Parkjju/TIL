@@ -36,13 +36,13 @@
 
 -   평가판 선택 뒤 모두 default로 설치
 
-<img src="../../images/plus.png" height="25vh" width="25vh"/>
+<img src="../../images/plus.png" height="50%" width="50%"/>
 
 -   Database의 플러스 버튼 -> Data source -> mysql
 
-<img src="../../images/mysql.png" height="25vh" width="25vh"/>
+<img src="../../images/mysql.png" height="50%" width="50%"/>
 
-<img src="../../images/datab.png" height="25vh" width="25vh"/>
+<img src="../../images/datab.png" height="50%" width="50%"/>
 
 -   위와 같이 창이 뜨는데, mysql 사용자 이름 및 패스워드 입력 후 Test Connection 진행하면,
 
@@ -54,7 +54,7 @@
 
 ### datagrip 갖고 놀기
 
-<img src="../../images/query.png" height="25vh" width="25vh"/>
+<img src="../../images/query.png" height="50%" width="50%"/>
 
 -   query console 클릭하여 **해당 데이터베이스에 대한 콘솔 생성**
 
