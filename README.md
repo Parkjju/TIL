@@ -91,6 +91,7 @@
 -   [210222 / CSS 중급](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_Advanced.md)
 -   [210307 / CSS Icon, Block Element Modifier, Font](https://github.com/Parkjju/TIL/blob/master/CSS/CSS_additional.md)
 -   [210308 / reset CSS](https://github.com/Parkjju/TIL/blob/master/CSS/resetCSS.md)
+-   [210311 / CSS not, cursor, color상속하기, form action&method attribute](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssnot.md)
 
 ### 📔Data structure
 
