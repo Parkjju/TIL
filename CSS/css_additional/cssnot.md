@@ -1,4 +1,4 @@
-# CSS not, cursor 프로퍼티, color 상속, form action&method
+# CSS not, cursor 프로퍼티, color 상속, form action&method, navigation
 
 ```html
 <style>
@@ -41,4 +41,18 @@
 
 ```html
 <form method="get" action="name.html"></form>
+```
+
+### navigation
+
+-   navigation태그는 일반적으로 ul로 나눠지고, 그 안에 많은 li로 구성
+
+```html
+<nav>
+    <ul>
+        <li>
+            <a href="#"></a>
+        </li>
+    </ul>
+</nav>
 ```

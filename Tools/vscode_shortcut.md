@@ -35,3 +35,19 @@
     -   기본 html 뼈대를 생성해주는 단축키</br>
 
 *   vscode 내에 페이지 두 개 동시에 띄워놓을수 있음 (오른쪽으로 드래그)</br>
+
+*   직접타이핑 없이 유효한 html태그 만들기
+
+```html
+nav>ul>li*4>a
+<nav>
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</nav>
+```
+
+-   nav안에 ul, ul안에 ,li 네개
