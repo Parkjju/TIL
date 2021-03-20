@@ -94,6 +94,10 @@
 -   [210311 / CSS not, cursor, color상속하기, form action&method attribute](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssnot.md)
 -   [210319 / CSS box, test-transform, z-index, flex children, forwards animation, will change](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssbox.md)
 
+### Javascript
+
+-   [210320 / JS 기초](https://github.com/Parkjju/TIL/blob/master/Javascript/start.md)
+
 ### 📔Data structure
 
 -   [210209 / 자료구조의 이해](https://github.com/Parkjju/TIL/blob/master/Data_structure/data_structure.md)
