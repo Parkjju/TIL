@@ -1,4 +1,4 @@
-# 선형 구조
+# 순차적 자료구조
 
 ### Array(배열), List(리스트)
 
@@ -327,3 +327,71 @@ def Josephus(loop, n):
         2. i=0, j=n-1부터 진행하여 i==j이거나 i>j일때까지 s[i]==s[j]검사
         3. deque 이용!
             - deque에 저장 후 popleft, pop이용하여 같은지 검사
+
+# 순차적 자료구조 - 연결 리스트 (Linked List) - 한방향 vs 양방향
+
+### 연결 리스트의 개념
+
+-   연결리스트는 파이썬의 list와는 다른 개념이다. -> 연속적인 메모리의 할당이 아니라, 다음 값이 저장되어 있는 주소가 필요함
+
+-   저장할 data값을 key, 값이 저장된 곳의 주소를 link라고 한다.
+
+-   이 둘을 합친 것을 **node라고 한다.** (클래스)
+
+### 한 방향 연결리스트 (singly linked list)
+
+-   가장 앞의 노드를 **head 노드라고 한다.** -> head 노드를 통해 리스트의 노드를 접근.
+-   가장 마지막 노드는 **해당 노드의 next가 None을 가리킨다.**
+
+-   head로부터 link를 따라가며 데이터를 참조하므로, **노드 위치에 따른 값 참조의 수행 시간이 늘어난다.** -> 파이썬의 리스트와는 다르게, 값 참조의 수행시간이 상수 시간이 아니다.
+
+-   값을 중간에 끼워넣는 연산을 진행하는 경우 insert
+
+    1. 파이썬 리스트 -> 최악의 경우 O(n)
+    2. 연결리스트 -> 노드의 link만 만져주면 됨 (상수시간)
+
+-   Node 클래스
+
+```python
+class Node:
+    def __init__(self, key=none, value=None):
+        self.key = key
+        self.value = value
+        self.next = None
+
+    def __str__(self):
+        return str(self.key) # key를 문자열 반환하는 스페셜메소드
+```
+
+-   한방향 연결 리스트 클래스
+-   (제너레이터 함수)[https://github.com/Parkjju/TIL/blob/master/Python/middle_class/generator.md]
+
+```python
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.size = 0
+
+    def __iter__(self):
+        v = self.head
+        while v!=None:
+            yield v
+            v = v.next
+
+    def __str__(self):
+        return " -> ".join(str(v) for v in self)
+
+    def __len__(self):
+        return self.size
+```
+
+-   iter 스페셜메소드에 작동방식에 대한 이해 (@@@@중요@@@@ - 천천히 읽어보기)
+
+    1. v를 head노드로 초기화한다.
+    2. v가 None인지 여부를 검사하여 while로 진입한다 (처음에 head로 초기화 하였으니, head가 None인지 검사할 것)
+    3. v를 yield하며 함수를 마친다.
+    4. 현재 바깥에서는 singly linked List 객체를 생성하여 iterator로서의 역할을 지시하고 있는 상황 (while루프 전달을 통해 연속적인 값의 참조를 진행)
+    5. 바깥의 while 루프 조건을 다시금 만족하여, iterator객체의 다음 값으로의 참조 (singly linked list객체)가 지시됨
+    6. 이전 yield문 다음 부터, 그 다음 yield문을 만날 때까지의 문장을 실행하므로 이번에 실행될 문장은 v=v.next이다.
+    7. v에 next를 저장하였고, 그 다음 iter스페셜 메소드로 돌아가 while 루프 조건 검사를 진행한다.
+    8. next가 저장된 v가 none이면 탈출, 아니면 다시금 해당 v를 yield한다.
