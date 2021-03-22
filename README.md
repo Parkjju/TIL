@@ -73,6 +73,7 @@
 -   [210306 / Python 데이터 프레임](https://github.com/Parkjju/TIL/blob/master/Python/additional/dataframe.md)
 -   [210308 / Python SQLAlchemy를 통해 mysql 데이터베이스 연동하기](https://github.com/Parkjju/TIL/blob/master/Python/additional/sqlAlchemy.md)
 -   [210322 / Python 문자열 자르고 합치기 - join, split함수](https://github.com/Parkjju/TIL/blob/master/Python/additional/join.md)
+-   [210323 / Python getitem, setitem 스페셜메소드](https://github.com/Parkjju/TIL/blob/master/Python/additional/getitem.md)
 </details>
 
 ### 📔Git
