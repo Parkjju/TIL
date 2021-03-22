@@ -354,7 +354,7 @@ def Josephus(loop, n):
 
 ```python
 class Node:
-    def __init__(self, key=none, value=None):
+    def __init__(self, key=none, value=None): # parameter 전달되지 않았을 시 default 모두 None으로 초기화
         self.key = key
         self.value = value
         self.next = None
@@ -395,3 +395,34 @@ class SinglyLinkedList:
     6. 이전 yield문 다음 부터, 그 다음 yield문을 만날 때까지의 문장을 실행하므로 이번에 실행될 문장은 v=v.next이다.
     7. v에 next를 저장하였고, 그 다음 iter스페셜 메소드로 돌아가 while 루프 조건 검사를 진행한다.
     8. next가 저장된 v가 none이면 탈출, 아니면 다시금 해당 v를 yield한다.
+
+*   str 스페셜 메소드 작동방식은 직접 SinglyLinkedList객체를 생성하고, 다음의 예제를 실행해보면 이해하게 된다.
+*   (pushBack, pushFront 등 데이터 생성까지 완료한 상황에서 다음의 예제를 실행)
+
+```python
+slist = SinglyLinkedList()
+print(str(slist))
+```
+
+-   작동 방식에 대한 이해를 정리하자면
+
+    1. join 컴프리헨션에 전달되는 for 문은 iter 스페셜 메소드의 generator 함수 호출을 진행한다.
+    2. 계속해서 yield하며 v로 각 node의 정보들이 전달된다.
+    3. 이를 str(v)를 통해 string으로 변환하고
+    4. join을 통해 표시할 노드 데이터들 사이사이에 -> 화살표 표시를 넣는다.
+
+#### 한방향 리스트에 구현되어야 할 각종 함수들
+
+1. L.pushFront(key) : key값을 갖는 새 노드를 L객체 가장 앞에 삽입 **L 객체 head의 변경**
+2. L.pushBack(key) : key값을 갖는 새 노드를 L객체 가장 뒤에 삽입 **함수 내에 tail 선언, 이를 통해 노드를 붙인다.**
+3. L.popFront() : L 객체의 head 노드를 삭제한 후 key 값을 리턴
+4. L.popBack() : L 객체의 가장 마지막 노드를 삭제한 후 key값 리턴
+5. L.search(key) : key값을 갖는 노드를 찾아 리턴
+6. L.remove(v) : L 객체에서 v 노드를 삭제
+
+-   함수들을 정의할 때에, 한방향 연결리스트 객체의 길이가 0인지 아닌 지에 대한 확인이 필요한 경우가 많으니 **주의**
+
+<!--Todo -->
+<!-- remove 함수 구현하기 + 구름에 제출하기 -->
+<!-- 각 연산의 시간복잡도 구해서 정리하기, 조교님께 컨택? -->
+<!-- reverse 구현하기 -->
