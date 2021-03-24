@@ -422,7 +422,100 @@ print(str(slist))
 
 -   함수들을 정의할 때에, 한방향 연결리스트 객체의 길이가 0인지 아닌 지에 대한 확인이 필요한 경우가 많으니 **주의**
 
-<!--Todo -->
-<!-- remove 함수 구현하기 + 구름에 제출하기 -->
-<!-- 각 연산의 시간복잡도 구해서 정리하기, 조교님께 컨택? -->
-<!-- reverse 구현하기 -->
+### 양방향 연결 리스트(doubly linked list)
+
+-   한방향 연결 리스트의 **결정적인 단점**은 다음 노드에 대한 링크(next)만 있어서, 이전 노드를 알기 위해서는 head 노드부터 차례로 탐색을 진행해야 한다.
+
+-   이를 보완하기 양방향 연결 리스트를 설계한다.
+
+    1. 이전 노드로의 링크 (prev)를 통해 왼쪽 이동
+    2. 마지막 노드와 head노드를 연결하여 원형 리스트를 가정
+    3. head노드는 **항상 dummy 노드가 되도록 하자**
+
+-   dummy 노드란? 리스트 처음을 구분할 수 있는 **"marker"**의 기능
+
+-   노드 클래스
+
+```python
+class Node:
+    def __init__(self, key=None):
+        self.key=key
+        self.next = self.prev = self # 자기 자신으로 향하는 링크, 첫 객체 생성 시 이러한 형태로 초기화 -> 그림그려보기
+
+    def __str__(self):
+        return str(self.key)
+```
+
+-   양방향(원형) 연결 리스트
+
+```python
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = Node()
+        self.size = 0
+
+    def __iter__(self):
+        pass
+
+    def __str__(self):
+        pass
+
+    def __len__(self):
+        pass
+
+    # 각 함수들 직접 작성해보기.
+```
+
+###### 중요 - splice(a,b,x)연산 - 다른 연산에 이용되는 중요한 기본연산
+
+-   노드 a부터 노드 b까지 떼어내(cut) -> 노드 x 뒤에 붙여넣는 연산 (cut-and-paste)
+
+    1. 조건1 - a와 b가 동일하거나 b가 a뒤에 나타나야함
+    2. 조건2 - head노드와 x는 a와 b사이에 포함되면 안됨.
+
+```python
+def splice(self, a,b,x):
+    if a==None or b==None or x==None:
+        return
+
+    ap = a.prev # ap is previous node of a
+    bn = b.next # bn is next node of b
+
+    # cut [a..b]
+    ap.next = bn
+    bn.prev = ap
+
+    # insert [a..b] after x
+    xn = x.next # xn is next node of x
+    xn.prev = b
+    b.next = xn
+    a.prev = x
+    x.next = a
+    # 떼어낸 [a..b]를 a는 x에, b는 xn에 연결하는 과정
+```
+
+<!-- Todo 추후 수업 및 과제에서 직접 구현한 것들 이곳에 정리하기 -->
+
+-   각종 연산들. (직접 구현해보기 - 추후 수업 과정에서 구현한 것들 정리)
+
+1. 탐색 및 기본 연산들
+    - search(key) : key 가지는 노드 값 리턴. 없으면 None
+    - isEmpty() : 빈 리스트면 True, 아니면 False
+    - first(), last() : 처음, 마지막 노드를 리턴
+2. 이동 및 삽입연산
+    - moveAfter(a,x) : 노드 a를 x뒤로
+    - moveBefore(a,x): 노드 a를 x이전으로
+    - insertAfter(x, key) : 노드 x 뒤에 데이터가 key인 새 노드 생성하여 삽입
+    - insertBefore(x, key) : 노드 x 앞에
+    - pushFront(key) : 데이터가 key인 새 노드 생성, head 다음에 삽입
+    - pushBack(key) : 데이터가 key인 새 노드 생성, head 이전에 삽입
+3. 삭제 연산
+
+    - remove(self, x) : 빈 리스트 체크 후 삭제 (자료45p 참조)
+    - popFront(self) : head 다음에 있는 노드 데이터 값 리턴 - 빈 리스트면 None리턴
+
+    * popBack(self) : head 이전에 있는 노드...
+
+4. 기타 연산
+    - join(another_list) : self 뒤에 another_list 연결
+    - split(x) : self를 노드 x 이전과 x 이후 노드들로 구성된 두 리스트로 분할
