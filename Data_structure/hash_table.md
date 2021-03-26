@@ -76,3 +76,94 @@
     - java.lang.String.hashCode()
 
 <!-- Todo: hash function들 실습해보기 -->
+
+### 충돌회피방법(Collision resolution method) - open addressing, Chaining
+
+-   open addressing - 충돌이 발생하면 주위의 빈 슬롯을 살펴본다.
+
+    1. linear probing
+    2. quadratic probing
+    3. double hashing
+
+-   chaining
+
+##### open addressing - linear probing?
+
+-   충돌이 발생하면 바로 다음 슬롯을 살피고, 또 충돌이 발생하면 계속해서 다음 슬롯을 살핌
+-   빈칸이 생기면 그곳에 데이터 저장 (처음과 끝이 연결되어 있다고 생각, 마지막 슬롯에서 충돌이 발생하면 처음 슬롯부터 다시 탐색)
+
+-   **cluster?** -> 군집된 데이터들
+
+-   search 메소드 구현의 경우 - 충돌 발생 이후 cluster 전체를 훑어도 key값을 찾지 못한 상태 -> 빈 슬롯을 search 하였다면 linear probing에 따라 저장되는 데이터인데 빈 슬롯에도 저장되어 있지 않았으므로 해당 key값을 가진 데이터는 없다고 판단.
+
+-   set(insert역할) 메소드 구현의 경우 - set(key,value=None):
+
+    1. key값이 해시 테이블에 **있으면** value를 Update
+    2. key값이 해시 테이블에 **없으면** (key, value)를 insert
+
+-   remove(key) -> 해시 테이블에 key있으면 value 삭제
+
+###### set, search, remove 연산
+
+-   find-slot(key) 함수 정의가 선행되어야 함
+
+    1. key값이 있으면 slot 번호 리턴
+    2. key값이 없으면 key값이 삽입될 slot 번호 리턴
+
+```text
+i = hash_function(key)
+start = i
+while (table[i] == occupied) and (table[i].key !=key) # occupied -> slot에 공간이 차있음
+    i = (i+1)%m
+    if i == start : return FULL # 테이블 전체가 꽉 차있음
+return i
+```
+
+-   set(key, value=None):
+
+    1. find-slot 호출
+    2. find-slot이 return한 값이 FULL이면, **table 사이즈를 키워야함**
+    3. find-slot이 return한 값의 슬롯에 value가 저장되어 있었으면 (is.occupied), value값 update
+    4. find-slot이 return한 값의 슬롯이 비어있으면, table[i].key, table[i].value = key, value
+    5. return key -> 성공적으로 set을 진행하였다는 표시
+
+-   search(key)
+
+    -   전체적인 흐름은 set과 유사함
+
+-   remove연산
+
+    -   remove진행 후에, 빈 슬롯으로 그대로 두면 **탐색의 고리가 끊어짐**
+    -   remove 이후 cluster 당겨주는 작업은 **key가 밀린 상태인지에 대한 test가 필요하다**
+    -   해당 작업을 연속된 빈칸이 등장할때까지 진행한다.
+    -   즉, k = f(table[j].key) - k는 테이블 j번째 키값의 해시함수 결과 & 빈칸이 i번째에 존재 - 에서, k에 있어야할 table[j].key가 밀려서 j에 있다면 해당 key를 빈칸으로 옮겨줘야한다.
+
+    -   i, k, j의 관계식 (j는 옮겨야하는 slot, k는 hash function의 결과 -- 원래 있어야 하는 자리, i는 빈칸)
+        1. k < i <= j
+        2. i < j < k
+        3. j < k < i
+
+<img src= "../Data_structure/images/kjh.jpg" width="30%" height="30%"/>
+
+```text
+remove(key):
+    i = find_slot(key)
+    if table[i] is unoccupied:
+        return None
+    j = i  //table[i] :빈 슬롯, table[j] : 옮겨야할 슬롯
+    while True:
+        table[i] = None
+        while True: # 이사할 table[j] 찾기
+            j = (j+1)%m
+            if table[j] is unoccupied: # 연속된 빈칸의 등장
+                return key # 성공적으로 remove 후 빈칸 채움까지 완료하였다는 표시
+            k = hash_function(table[j].key)
+            if (k < i <= j):
+                break
+        table[i] = table[j]
+        i=j
+```
+
+-   linear probing의 성능 좌우하는 부분? -> **cluster의 길이에 비례함** -> **hash function이 어느 정도로 cluster를 형성하지 않고 분산되게 데이터를 저장하였는가?**
+
+<!-- Todo remove, search, set 연산 구현해보기 -->
