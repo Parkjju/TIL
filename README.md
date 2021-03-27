@@ -123,6 +123,7 @@
 -   [210219 / 트레이딩 봇 클론코딩 - OT](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/OT.md)
 -   [210222 / 트레이딩 봇 클론코딩 - 개발환경 세팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/devSetting.md)
 -   [210222 / 트레이딩 봇 클론코딩 - 키움증권 Open API, KOA Studio 설치](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter1/OpenAPI.md)
+-   [210327 / 트레이딩 봇 클론코딩 - 일별 금융 데이터 콜렉팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/daily_craw.md)
 
 </details>
 
