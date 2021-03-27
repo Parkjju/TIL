@@ -123,7 +123,6 @@
 -   [210219 / 트레이딩 봇 클론코딩 - OT](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/OT.md)
 -   [210222 / 트레이딩 봇 클론코딩 - 개발환경 세팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/devSetting.md)
 -   [210222 / 트레이딩 봇 클론코딩 - 키움증권 Open API, KOA Studio 설치](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter1/OpenAPI.md)
--   [210327 / 트레이딩 봇 클론코딩 - 일별 금융 데이터 콜렉팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/daily_craw.md)
 
 </details>
 
@@ -149,6 +148,8 @@
 -   [210226 / 트레이딩 봇 클론코딩 - 인터프리터와 IDE (Pycharm 디버거 사용법)](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/interpreter.md)
 -   [210305 / 트레이딩 봇 클론코딩 - 데이터베이스 연동하기](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/database_on.md)
 -   [210311 / 트레이딩 봇 클론코딩 - 주식 기본 용어 정리 및 datagrip 설치](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/stock_basic.md)
+-   [210327 / 트레이딩 봇 클론코딩 - 일별 금융 데이터 콜렉팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/daily_craw.md)
+
 </details>
 
 </details>
