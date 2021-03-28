@@ -149,7 +149,7 @@
 -   [210305 / 트레이딩 봇 클론코딩 - 데이터베이스 연동하기](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/database_on.md)
 -   [210311 / 트레이딩 봇 클론코딩 - 주식 기본 용어 정리 및 datagrip 설치](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/stock_basic.md)
 -   [210327 / 트레이딩 봇 클론코딩 - 일별 금융 데이터 콜렉팅](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/daily_craw.md)
-
+-   [210328 / 트레이딩 봇 클론코딩 - 콜렉팅 데이터 업데이트 및 분별 금융 데이터 수집](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter4/minute_data.md)
 </details>
 
 </details>
