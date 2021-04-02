@@ -157,7 +157,7 @@
 <summary> Chapter5 </summary>
 
 -   [210329 / 트레이딩 봇 클론코딩 - 시뮬레이션 변수 설정 함수](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter5/simulator.md)
-
+-   [210402 / 트레이딩 봇 클론코딩 - 시뮬레이터별 자동 데이터베이스 생성 함수, 시뮬레이터 이용 변수 정리](https://github.com/Parkjju/TIL/blob/master/Projects/investing_bot/Chapter5/database.md)
 </details>
 
 </details>
