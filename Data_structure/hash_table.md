@@ -146,6 +146,7 @@ return i
 <img src= "../Data_structure/images/kjh.jpg" width="30%" height="30%"/>
 
 ```text
+# pseudo code
 remove(key):
     i = find_slot(key)
     if table[i] is unoccupied:
@@ -167,3 +168,42 @@ remove(key):
 -   linear probing의 성능 좌우하는 부분? -> **cluster의 길이에 비례함** -> **hash function이 어느 정도로 cluster를 형성하지 않고 분산되게 데이터를 저장하였는가?**
 
 <!-- Todo remove, search, set 연산 구현해보기 -->
+
+##### open addressing - quadratic probing (제곱의 인덱스), double hashing (hash function을 두개 사용)
+
+-   **quadratic probing** -> 기존 linear probing에서 슬롯 search를 진행할 때, 해당 슬롯이 occupied 되어있으면 한 칸씩 건너뛰었다.
+
+    -   quadratic probing에서는 k번째 슬롯이 occupied 되어있었다면, k+**n^2**만큼 건너뛴다.
+
+-   **double hashing** -> hashfunction을 두개 사용함.
+    -   k번째 슬롯이 occupied되어있었다면, 기존 f hash function에 key값을 대입하여 새로운 slot을 찾는다.
+    -   그럼에도 해당 슬롯이 occupied 되어있다면, 그 다음 빈 슬롯을 찾기 위해 **또 다른 hashfunction을 정의하여, f(key) + g(key) 슬롯을 찾는다.**
+    -   그럼에도 해당 슬롯이 occupied 되어있다면, 이후로는 **f(key) + n\*g(key)** 형태로 계속해서 슬롯을 찾아나간다.
+
+##### quadratic probing & double hashing 성능평가
+
+-   linear probing 복기 -> set, remove, search : cluster size에 의 해 영향.
+
+    -   cluster 형성이유 ?
+
+    1. hash function
+    2. collision resolution method
+    3. load factor: n/m -> m: hash table 사이즈 (slot 갯수) , n: hash table에 저장된 item 갯수.
+        - set, remove, search 등 함수에 대해 그래프를 그려 비교할 수 있음.
+          <img src="../Data_structure/images/graph.jpg" height="40%" width="40%"/>
+        - 또는, 함수를 돌면서 발생한 collision횟수를 저장된 slot의 개수인 n으로 나누어 충돌 비율 비교를 통해 hash function에 대한 성능평가를 진행.
+
+-   **m>=2n**, 즉 최소 50%이상 빈 슬롯을 유지한다면 cluster의 사이즈가 O(1)로 형성된다. -> set, remove, search를 O(1)에 사용할 수 있게된다는 의미임.
+
+#### 충돌 회피 방법 - chaining
+
+-   각 슬롯에 꼭 하나의 데이터만 저장해야하는가? NO!
+-   슬롯에 **한방향 연결리스트를 생성**하여 데이터를 계속해서 저장. (양방향도 상관X)
+-   hash의 set함수 호출 -> 해당 연결리스트에 pushFront를 통해 슬롯에 데이터를 새롭게 저장하게 되는것. **O(1)**
+-   search 함수 -> 해당 슬롯에 충돌된 key의 평균 개수 **O(충돌 key의 평균 개수)** -> 연결리스트의 길이
+-   remove 함수 -> search와 동일 (search해야하기 때문)
+    -> hash function을 **c-universal**로 작성했을 때, 슬롯 내의 연결리스트 평균 개수의 길이가 O(1).
+
+### 최종 정리
+
+-   빈 슬롯이 충분하다고 가정하였을 때, set, remove, search 등의 함수를 O(1)시간에 사용할 수 있음.
