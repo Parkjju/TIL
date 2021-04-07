@@ -8,6 +8,8 @@
 
 2.꾸준하게 공부하는 습관을 기르기 위하여 시작합니다.
 
+3. [git log](https://github.com/Parkjju/TIL/blob/master/gitlog.md)
+
 ## 📚공부 목록
 
 ### 📔Python
