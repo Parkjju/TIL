@@ -110,7 +110,7 @@
 -   [210216 / 선형 자료구조 - Array, List, Stack, Queue, Deque, Linked List](https://github.com/Parkjju/TIL/blob/master/Data_structure/sequential_structure.md)
 -   [210325 / 해시 테이블(Hash Table)](https://github.com/Parkjju/TIL/blob/master/Data_structure/hash_table.md)
 -   [210402 / 스택을 이용하여 계산기 구현하기 - postfix수식, 구현구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/stack_cal.md)
--   [210408 / 한 방향 연결리스트 연산 구현](https://github.com/Parkjju/TIL/blob/master/gitlog.md)
+-   [210408 / 한 방향 연결리스트 연산 구현](https://github.com/Parkjju/TIL/blob/master/Data_structure/SinglyLinkedList.md)
 
 ### 🔨Tools
 
