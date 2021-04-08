@@ -14,3 +14,8 @@
 -   [Whimsical Wireframes](https://whimsical.com/wireframes)
 -   design 툴 소개 - 맥OS Sketch, window Adobe XD?
 -   해시테이블 충돌 open addressing 마크다운 정리
+
+[ 20210408 ]
+
+-   한 방향 연결리스트 함수들 구현 실습
+-   pushFront, pushBack, popFront, popBack, search, remove함수 구현 (테스트케이스 PASS)
