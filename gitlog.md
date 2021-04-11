@@ -30,3 +30,8 @@
 
 -   양 방향 연결리스트 함수 구현ing
 -   [링크](https://github.com/Parkjju/TIL/blob/master/Data_structure/doublyLinkedList.md)
+
+[ 20210411 ]
+
+-   [양 방향 연결리스트 연산 구현과제 마무리](https://github.com/Parkjju/TIL/blob/master/Data_structure/doublyLinkedList.md)
+-   [파이썬의 딕셔너리 - 해시테이블과 관련된 토막지식 강의](https://github.com/Parkjju/TIL/blob/master/Data_structure/pydict.md)
