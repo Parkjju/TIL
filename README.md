@@ -112,6 +112,7 @@
 -   [210402 / 스택을 이용하여 계산기 구현하기 - postfix수식, 구현구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/stack_cal.md)
 -   [210408 / 한 방향 연결리스트 연산 구현](https://github.com/Parkjju/TIL/blob/master/Data_structure/SinglyLinkedList.md)
 -   [210410 / 양 방향 연결리스트 연산 구현](https://github.com/Parkjju/TIL/blob/master/Data_structure/doublyLinkedList.md)
+-   [210411 / 파이썬 딕셔너리 작동방식](https://github.com/Parkjju/TIL/blob/master/Data_structure/pydict.md)
 
 ### 🔨Tools
 
