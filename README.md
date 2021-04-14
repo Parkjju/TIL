@@ -86,6 +86,8 @@
 -   [210208 / git 명령어모음 (2021.02.08)](https://github.com/Parkjju/TIL/blob/master/Git/git_command.md)
 -   [210224 / git 레포지토리 README에 방문자 수 표시하기](https://github.com/Parkjju/TIL/blob/master/Git/hits.md)
 -   [210307 / git ignore설정](https://github.com/Parkjju/TIL/blob/master/Git/gitignore.md)
+-   [210414 / git fetch & git pull 차이점](https://github.com/Parkjju/TIL/blob/master/Git/git_fetch.md)
+-   [210414 / git submodule 개념 총정리](https://github.com/Parkjju/TIL/blob/master/Git/git_submodule.md)
 
 ### 📔HTML
 
