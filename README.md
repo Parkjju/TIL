@@ -14,6 +14,17 @@
 
 -   [2021 개발 기록](https://github.com/Parkjju/TIL/blob/master/gitlog.md)
 
+### 목차
+
+-   [1. Python](#📔Python)
+-   [2. Git](#📔Git)
+-   [3. HTML](#📔HTML)
+-   [4. CSS](#📔CSS)
+-   [5. Javascript](#Javascript)
+-   [6. Data structure](#📔Data-structure)
+-   [7. Tools](#🔨Tools)
+-   [8. Projects](#📝Projects)
+
 ### 📔Python
 
 <details>
