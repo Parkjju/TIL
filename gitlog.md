@@ -67,3 +67,12 @@
 [ 20210416 ]
 
 -   해시테이블 과제중
+
+[ 20210417 ]
+
+-   노마드 코더 Javascript 시작 - why Vanilla JS?
+
+[ 20210418 ]
+
+-   classlion form태그 정리
+-   [노마드 코더 JS #1 Theory part 마무리](https://github.com/Parkjju/TIL/blob/master/Javascript/Theory.md)
