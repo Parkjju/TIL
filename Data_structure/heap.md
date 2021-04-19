@@ -152,6 +152,7 @@ delete_max:
 -   **heap_sort?**
     -   n개의 값을 받아서 heap으로 정렬
     -   n번을 delete max하지만, **pop을 하지 않게 구현** -> 값을 잃지 않게 정렬만 진행함. (root와 최하단 leaf node의 swap으로 구현)
+    *   수행시간 O(nlogn)
 
 ```text
 make_heap(n)
