@@ -76,3 +76,7 @@
 
 -   classlion form태그 정리
 -   [노마드 코더 JS #1 Theory part 마무리](https://github.com/Parkjju/TIL/blob/master/Javascript/Theory.md)
+
+[ 20210419 ]
+
+-   [heap 정의 및 각종 연산 내용 정리](https://github.com/Parkjju/TIL/blob/master/Data_structure/heap.md)
