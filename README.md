@@ -129,6 +129,7 @@
 -   [210411 / 파이썬 딕셔너리 작동방식](https://github.com/Parkjju/TIL/blob/master/Data_structure/pydict.md)
 -   [210415 / 해시테이블 open addressing 실습](https://github.com/Parkjju/TIL/blob/master/Data_structure/open_addressing.md)
 -   [210413 / 트리 자료구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/tree.md)
+-   [210419 / heap 자료구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/heap.md)
 
 ### 🔨Tools
 
