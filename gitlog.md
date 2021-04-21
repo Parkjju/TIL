@@ -80,3 +80,7 @@
 [ 20210419 ]
 
 -   [heap 정의 및 각종 연산 내용 정리](https://github.com/Parkjju/TIL/blob/master/Data_structure/heap.md)
+
+[ 20210421 ]
+
+-   tree.md에 이진트리 내용 추가
