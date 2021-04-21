@@ -38,3 +38,87 @@
     -   자식 노드를 가리킬 link (left, right)
     -   부모 노드를 가리킬 parents
     -   value 등등ㅇ.. 기타의 것들
+
+### 이진 트리 (Binary Tree)
+
+-   표현법
+
+    1. 이진트리 -> 배열, 리스트 (heap)
+    2. 노드와 링크를 직접적으로 표현 (노드 클래스를 구성) - Node, Binary Tree class
+
+-   노드 클래스의 선언
+
+```python
+class Node:
+    def __init__(self,key):
+        self.key = key
+        self.parent = self.left = self.right = None
+
+    def __str__(self):
+        return str(self.key)
+
+def main():
+    a = Node(6)
+    b = Node(9)
+    c = Node(1)
+    d = Node(5)
+
+    a.left=b
+    a.right=c
+    b.parent=a
+    c.parent=a
+    b.right=d
+    d.parent=b
+```
+
+**순회 (Traverse)**
+
+1. preorder
+2. inorder
+3. postorder
+
+-   이진트리 순회 (traversal) : 이진트리 노드의 key값을 빠짐없이 출력하는 방법 -> **재귀적으로 구현!**
+-   M노드 : 자기자신, L : M의 left subtree, R : M의 Right subtree
+
+1. preorder : M -> L -> R 순서
+2. inorder : L -> M -> R 순서
+3. postorder : L -> R -> M 순서
+
+```python
+class Node:
+    def __init__(self,key):
+        self.key = key
+        self.parent = self.left = self.right = None
+
+    def __str__(self):
+        return str(self.key)
+
+    def preorder(self): # self -> 현재 방문중인 노드
+        if self!=None:
+            print(self.key)
+            if self.left:
+                self.left.preorder()
+            if self.right:
+                self.right.preorder()
+
+    def inorder(self):
+        if self!=None:
+            if self.left:
+                self.left.inorder()
+            print(self.key)
+            if self.right:
+                self.right.inorder()
+
+    def postorder(self):
+        if self!=None:
+            if self.left:
+                self.left.postorder()
+            if self.right:
+                self.right.postorder()
+            print(self.key)
+```
+
+-   상황가정) 이진트리의 모양을 모르는 상태.
+    1. preorder : F B A D C E G I H
+    2. inorder : A B C D E F G H I
+-   이로부터 원래의 이진트리의 모양을 복원하는 작업 -> **reconstruct**
