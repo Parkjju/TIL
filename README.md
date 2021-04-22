@@ -117,6 +117,7 @@
 
 -   [210320 / JS 기초](https://github.com/Parkjju/TIL/blob/master/Javascript/start.md)
 -   [210419 / JS variable, let const var, Data Types, Organizing data - array&object](https://github.com/Parkjju/TIL/blob/master/Javascript/Theory.md)
+-   [210422 / JS function](https://github.com/Parkjju/TIL/blob/master/Javascript/practice.md)
 
 ### 📔Data structure
 
