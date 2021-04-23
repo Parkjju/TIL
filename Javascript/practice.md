@@ -156,6 +156,14 @@ if ("park" === "jun" || "park" === "park") {
 }
 ```
 
+-   not equal
+
+```js
+if ("Park" !== "Jun") {
+    console.log("AA");
+}
+```
+
 ### DOM - if-else Function practice
 
 -   [javascript DOM event MDN](https://developer.mozilla.org/ko/docs/Web/Events)
@@ -176,3 +184,122 @@ window.addEventListener("online", handleOnline);
 ```
 
 -   와이파이 끄면 offline event로 인식되어 실제로 handleOffline 함수가 호출됨!!
+
+### DOM - if else Function practice two
+
+-   실습코드
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Somthing</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <h1 id="title" class="btn">This works!</h1>
+        <script src="index.js"></script>
+    </body>
+</html>
+```
+
+```css
+body {
+    background-color: #ecf0f1;
+}
+
+h1 {
+    color: #34495e;
+    transition: color 0.5s ease-in-out;
+}
+
+.clicked {
+    color: #7f8c8d;
+}
+
+.btn {
+    cursor: pointer;
+}
+```
+
+```js
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+    const currentClass = title.className;
+    if (currentClass !== CLICKED_CLASS) {
+        title.className = CLICKED_CLASS;
+    } else {
+        title.className = "";
+    }
+}
+
+function init() {
+    title.addEventListener("click", handleClick);
+}
+init();
+```
+
+-   JS가 CSS를 처리하지 않고, 로직을 처리하게 하고싶다.
+-   title.className을 이용!!!
+-   전체에 대학 적용 오류 발생 -> replacing 오류.
+
+-   classList이용 !!
+-   replacing 수정 코드
+
+```js
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+    const currentClass = title.className;
+    if (currentClass !== CLICKED_CLASS) {
+        title.classList.add(CLICKED_CLASS);
+    } else {
+        title.classList.remove(CLICKED_CLASS);
+    }
+}
+
+function init() {
+    title.addEventListener("click", handleClick);
+}
+init();
+```
+
+-   위와 같이 js를 수정하면, 기존 html에서 **class="btn"** -> **class="btn clicked"**로 변경되지만,
+-   이후 remove를 진행하고자 할때 **class="clicked"**라는 클래스가 없어서 remove를 진행하지 못함.
+-   **contains**이용!! - value가 포함되어 있는지 체크
+
+```js
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+    const hasClass = title.classList.contains(CLICKED_CLASS);
+    if (hasClass) {
+        title.classList.remove(CLICKED_CLASS);
+    } else {
+        title.classList.add(CLICKED_CLASS);
+    }
+}
+
+function init() {
+    title.addEventListener("click", handleClick);
+}
+init();
+```
+
+-   contains mdn 정의 - **Node.contains() 메소드는 주어진 인자가 node 의 자손인지, 아닌지에 대한 Boolean 값을 리턴합니다.**
+
+-   **toggle함수** => js built-in-function -> handle click정의함수와 같은 역할을 함..!
+-   클래스 숨겨주기...
+
+```js
+function handleClick() {
+    title.classList.toggle(CLICKED_CLASS);
+}
+```
