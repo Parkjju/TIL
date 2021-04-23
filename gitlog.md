@@ -88,3 +88,9 @@
 [ 20210422 ]
 
 -   JS 함수 정의하기
+
+[ 20210424 ]
+
+-   JS DOM 개념 이해
+-   JS 함수 정의 심화 - if-else이용
+-   DOM practice -> html class 관련 method 이용 - add, remove, toggle, contains..
