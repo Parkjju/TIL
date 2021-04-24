@@ -89,8 +89,13 @@
 
 -   JS 함수 정의하기
 
-[ 20210424 ]
+[ 20210423 ]
 
 -   JS DOM 개념 이해
 -   JS 함수 정의 심화 - if-else이용
 -   DOM practice -> html class 관련 method 이용 - add, remove, toggle, contains..
+
+[ 20210424 ]
+
+-   JS todo list - 실시간 시간 업데이트하기
+-   localStorage.getItem, setItem으로 유저 정보 저장하기 & 얻기

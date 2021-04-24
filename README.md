@@ -118,6 +118,7 @@
 -   [210320 / JS 기초](https://github.com/Parkjju/TIL/blob/master/Javascript/start.md)
 -   [210419 / JS variable, let const var, Data Types, Organizing data - array&object](https://github.com/Parkjju/TIL/blob/master/Javascript/Theory.md)
 -   [210422 / JS function, DOM, events, if-else, class와 관련된 메소드 (add,remove,contains, toggle)](https://github.com/Parkjju/TIL/blob/master/Javascript/practice.md)
+-   [210424 / JS TODO list 만들기](https://github.com/Parkjju/TIL/blob/master/Javascript/app.md)
 
 ### 📔Data structure
 
