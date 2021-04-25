@@ -99,3 +99,11 @@
 
 -   JS todo list - 실시간 시간 업데이트하기
 -   localStorage.getItem, setItem으로 유저 정보 저장하기 & 얻기
+
+[ 20210425 ]
+
+-   JS todo list - 목록 추가하기
+-   목록 삭제하기
+-   JSON이용하여 js obj와 string 서로 parse
+-   js로 이미지 불러오기
+-   js math모듈 이용하여 난수 생성
