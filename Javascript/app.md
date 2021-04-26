@@ -148,3 +148,84 @@ function genRandom() {
     return number;
 }
 ```
+
+### Getting the Weather part one geolocation
+
+-   navigator모듈 이용
+    -   navigator.geolocation.getCurrentPosition(arg1, arg2)
+    -   arg1 - 좌표정보 얻어내는데 성공하였을 때 다루는 함수
+    -   arg2 - 좌표정보 얻어내는데 실패하였을 때 다루는 함수
+
+```js
+function handleGeoSuccess(position) {
+    console.log(position);
+}
+
+function handleGeoError() {
+    console.log(`Cant access geo location`);
+}
+
+function askForCoords() {
+    navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+}
+
+function loadCoords() {
+    const loadedCoords = localStorage.getItem(COORDS);
+    if (loadedCoords === null) {
+        askForCoords();
+    } else {
+        //getweather
+    }
+}
+```
+
+1. storage에 좌표 정보가 null
+2. 좌표 요청 - getCurrentPosition 메소드
+3. 요청 성공시 position 객체를 success함수로 자동 전달하여 출력하게 됨 (여러가지 정보가 포함)
+
+-   정상 작동시 출력되는 객체
+
+```js
+GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1619444366778}
+coords: GeolocationCoordinates
+accuracy: 1225
+altitude: null
+altitudeAccuracy: null
+heading: null
+latitude: 37.2801536
+longitude: 127.1627776
+speed: null
+__proto__: GeolocationCoordinates
+timestamp: 1619444366778
+__proto__: GeolocationPosition
+```
+
+### weather API 다루기
+
+-   [weather API site](https://openweathermap.org/)
+-   가입 후 계정 - My API keys - API key 복사하여 js파일 변수에 할당
+
+-   **API란?** - 특정 웹사이트로부터 데이터를 얻거나 컴퓨터(machines)끼리 소통하기 위해 고안된 것.
+
+-   By geigraphic coordinates - API call실습
+-   JS를 통해 특정 URL호출하는 법
+    -   JS는 웹사이트로 request를 보내고 응답을 통해 데이터를 얻을 수 있음
+    -   가져온 데이터를 refresh없이도 나의 웹사이트에 적용시킬 수 있음
+-   fetch(`https:// ~~~~`); - 백틱 안에 https:// + API call 코드
+
+-   chrome - inspect - network패널 -> 우리가 request한 내용을 보여줌
+    -   network 패널의 response - 응답받은 데이터를 볼 수 있음
+
+*   URL에 &units=metric 덧붙여서 섭씨온도로 바꾸기
+
+```js
+{"coord":{"lon":127.1628,"lat":37.2802},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03n"}],"base":"stations","main":{"temp":13.62,"feels_like":12.89,"temp_min":13,"temp_max":15,"pressure":1020,"humidity":71},"visibility":10000,"wind":{"speed":0.51,"deg":150},"clouds":{"all":40},"dt":1619446486,"sys":{"type":1,"id":5509,"country":"KR","sunrise":1619383359,"sunset":1619432125},"timezone":32400,"id":6573747,"name":"Dongjinwon","cod":200}
+```
+
+-   210426기준 날씨정보
+
+*   then=>온점(.)이전 작업이 완전히 끝난 후 괄호 안의 내용을 실행시킴.
+
+*   이렇게 하지 않고 평소처럼 ;로 문장을 끝나고 바로 다음 문장을 썼을 경우,
+
+*   이전 작업이 시간이 걸려 다 완료되지 않았는데도 다음 문장이 실행되어 오류가 발생할 수 있음.
