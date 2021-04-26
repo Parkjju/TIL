@@ -107,3 +107,9 @@
 -   JSON이용하여 js obj와 string 서로 parse
 -   js로 이미지 불러오기
 -   js math모듈 이용하여 난수 생성
+
+[ 20210426 ]
+
+-   JS todo list 날씨정보 추가하기
+-   open weather API로부터 정보 받아오기
+-   weather API로부터 얻어온 지역명칭이 다름. 확인필요
