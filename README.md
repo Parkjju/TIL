@@ -16,16 +16,17 @@
 
 ### 목차
 
--   [1. Python](#Python)
--   [2. Git](#Git)
--   [3. HTML](#HTML)
--   [4. CSS](#CSS)
--   [5. Javascript](#Javascript)
--   [6. Data structure](#Data-structure)
--   [7. Tools](#Tools)
--   [8. Projects](#Projects)
+-   [1. Daily CS](#Daily-CS)
+-   [2. Python](#Python)
+-   [3. Git](#Git)
+-   [4. HTML](#HTML)
+-   [5. CSS](#CSS)
+-   [6. Javascript](#Javascript)
+-   [7. Data structure](#Data-structure)
+-   [8. Tools](#Tools)
+-   [9. Projects](#Projects)
 
-### Daily CS
+### 💻Daily CS
 
 -   [210428 / Docker란?](https://github.com/Parkjju/TIL/blob/master/computer_science/docker.md)
 
