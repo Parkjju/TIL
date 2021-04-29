@@ -29,6 +29,7 @@
 ### 💻Daily CS
 
 -   [210428 / Docker란?](https://github.com/Parkjju/TIL/blob/master/computer_science/docker.md)
+-   [210429 / domain이란?](https://github.com/Parkjju/TIL/blob/master/computer_science/domain.md)
 
 ### 📔Python
 
