@@ -113,3 +113,19 @@
 -   JS todo list 날씨정보 추가하기
 -   open weather API로부터 정보 받아오기
 -   weather API로부터 얻어온 지역명칭이 다름. 확인필요
+
+[ 20210427 ]
+
+-   todo list 폰트 추가
+-   todo list reset CSS 적용 및 배경 이미지 조정
+
+[ 20210428 ]
+
+-   해시테이블 과제 풀이 완료 (해시 클래스 파이썬으로 구현 및 당근마켓 예제)
+-   toss SLASH2021 컨퍼런스 day1 참석 - 토스 서버 인프라 부분 듣다가 포기
+-   Daily CS 쌓기 시작 - Docker란?
+-   멋쟁이사자처럼 netlify로 페이지 배포하기 실습 및 마크다운 정리
+
+[ 20210429 ]
+
+-   domain 개념정리
