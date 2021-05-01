@@ -134,3 +134,7 @@
 
 -   멋사 classlion CSS - CSS 기초, 선택자, 값과 단위 수강 및 마크다운 정리
 -   nomad coders - 서버리스 개념 정리
+
+[ 20210501 ]
+
+-   nomad coders - library vs framework 개념정리
