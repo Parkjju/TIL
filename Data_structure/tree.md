@@ -122,3 +122,151 @@ class Node:
     1. preorder : F B A D C E G I H
     2. inorder : A B C D E F G H I
 -   이로부터 원래의 이진트리의 모양을 복원하는 작업 -> **reconstruct**
+
+### 이진 탐색 트리(Binary search Tree)
+
+-   탐색 기능에 효율적으로 이용되는 자료구조
+-   각 노드의 왼쪽 subtree의 key값은 노드의 key값보다 작거나 같아야함.
+-   각 노드의 오른쪽 subtree의 key값은 노드의 key값보다 커야함.
+-   `A = [15,4,20,None,2,17,32,None,None,None,19,None,None]`
+-   **루트노드 뿐만 아니라 모든 노드에 있어서 해당 규칙이 적용되어야 함.**
+
+-   15(루트 노드) > 왼쪽 subtree(4), 15(루트 노드) < 오른쪽 subtree(20)
+
+-   search(19) -> 루트부터(15) 시작 - 15보다 크므로 오른쪽 subtree -> 20보다 작음 - 20의 왼쪽 subtree -> .....
+
+-   level by level로 내려감 -> 한 레벨마다 작을 지 클 지 판단됨 -> O(h), h==height.
+-   트리 자료구조 -> height를 최대한 작게 유지 !!!
+
+```python
+class BST:
+    def __init__(self):
+        self.root=None
+        self.size=0
+
+    def __len__(self):
+        return self.size
+
+    def __iter__(self):
+        return self.root.__iter__() # Node class의 iter 스페셜메소드 호출, BST class 말고!!!
+    # iter메소드는 제너레이터로 정의하기
+
+T = BST()
+T.insert(15)
+T.insert(4)
+#       15
+#   4       None, 4가 15의 왼쪽subtree로 들어가야함. 그렇게 되도록 insert메소드를 구현!!
+```
+
+-   find_location 메소드
+
+```python
+class BST:
+    # .....
+    def find_loc(self,key): # key 값 노드가 있다면 해당 노드를 return, 없다면 삽입될 위치의 부모노드를 리턴
+        if self.size==0:
+            return None
+        p = None # 한방향 연결리스트 tail찾기와 비슷한 방식
+        v = self.root
+        while v!=None:
+            if v.key==key:
+                return v
+            elif v.key < key:
+                p = v
+                v = v.right
+            else:
+                p = v
+                v = v.left
+        # while을 빠져나옴 ->그 동안 따라왔던 부모노드 p를 리턴.
+        return p
+
+    def search(self,key):
+        v = self.find_loc(key)
+        if v == None:
+            return None
+        else:
+            return v
+
+    def insert(self,key):
+        p = self.find_loc(key) # : O(h) -> 상수시간
+        # p와 v의 링크를 달아줌
+        if p==None or p.key!=key:
+            v = Node(key)
+            if p == None:
+                self.root = v # p는 부모노드인데, None이므로 루트노드
+            else: # p가 루트노드가 아니면서, p의 key값이 insert할 key와 값이 다르다. - 정상적인 상황
+            # insert할 key의 왼쪽에 들어갈 지, 오른쪽에 들어갈 지 모르는 상황
+                v.parent = p
+                if p.key > key:
+                    p.left = v
+                else:
+                    p.right = v
+            self.size+=1
+            return v
+        else:
+            print("key is already in tree") # tree에 존재하는 key값을 다시 insert하려는 시도를 했다고 알려주는 부분
+            return p
+```
+
+-   삭제연산(delete) : deleteByMerging, deleteByCopying
+
+    -   deleteByMerging(self,x) -> 노드 x를 삭제.
+    -   deleteByCopying
+
+-   deleteByMerging(self,x)
+    -   왼쪽 subtree를 L, 오른쪽 subtree를 R
+    -   삭제한 x 자리에 L이 오도록 함
+    -   가장 큰 key값을 가진 노드를 m이라고 할때 해당 노드에 R을 연결한다.
+    -   L의 루트노드와 삭제한 x노드의 부모 노드와 link update
+-   특수한 경우
+    1. a==None -> b가 x를 대체
+    2. x == root -> x가 트리의 루트노드가 아니면 L이 그냥 x를 대체하면 됨
+
+```python
+# pseudo code
+def deleteByMerging(self,x):
+    a = x.left
+    b = x.right
+    c = x자리를 대체할 노드
+    m = L에서 key가 가장 큰 노드 # L에서 key값이 가장 큰 노드
+    pt = x.parent
+    if a!=None:
+        c = a
+        m = a
+        while m.right:
+            m = m.right
+        if b!=None:
+            b.parent = m
+            m.right = b
+        else: # a==None
+            c = b
+        # x를 대체한 뒤에 x의 부모와 대체한 노드의 링크를 업데이트
+
+        if pt!=None:
+            if c:
+                c.parent = pt
+            if pt.key < c.key:
+                pt.right = c
+            else:
+                pt.left = c
+        else: # x.parent==None -> 루트노드
+            self.root = c
+            if c: # c가 none이 아니어야함
+                c.parent=None
+
+        self.size -= 1
+```
+
+-   deleteByCopying
+-   삭제할 x노드의 left subtree -> L, right subtree -> R
+-   삭제할 x노드의 key값을, L의 가장 큰 key값으로 copy를 진행
+-   이후 copy되었던 노드의 left subtree를 하나씩 끌어올려서 대체한다.
+
+-   **deleteByMerging, deleteByCopying 수행시간**
+
+    -   두 함수 모두 L, 즉 삭제할 x노드의 left subtree의 maximum key를 찾는 데에 가장 많은 시간을 사용한다.
+    -   최악의 경우 O(h)시간
+
+-   따라서 이진탐색트리에 있어서 insert, search, delete-merging and copying에 있어서 모두 최악의 경우 O(h)시간이 걸린다.
+    -   이진 탐색트리의 h에 있어서 수행시간의 차이가 분명 존재할 것이다.
+    -   h를 최소화 하도록 강제적으로 하는 이진탐색트리를 **balanced-binary tree**라고 함.
