@@ -159,7 +159,7 @@ remove(key):
             if table[j] is unoccupied: # 연속된 빈칸의 등장
                 return key # 성공적으로 remove 후 빈칸 채움까지 완료하였다는 표시
             k = hash_function(table[j].key)
-            if (k < i <= j):
+            if (k < i <= j): # k, i, j 세 가지 조건에 따라 모두 검사해야함.
                 break
         table[i] = table[j]
         i=j
