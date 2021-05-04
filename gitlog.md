@@ -144,3 +144,57 @@
 -   자료구조 이진탐색트리의 정의
 -   자료구조 이진탐색트리의 탐색 및 삭제연산
 -   coursera - Google IT Support 시작 (1주차 Introduction to IT Support - What is IT?)
+
+[ 20210504 ]
+
+-   classlion CSS - 텍스트와 관련된 프로퍼티 수강 및 실습
+-   classlion CSS - 박스 모델 수강 및 실습
+-   멋쟁이사자처럼9기 - 부트스트랩 이용한 개인 페이지 배포하기 실습
+-   coursera - Introduction to IT Support (survey 및 오리엔테이션 마무리)
+-   nomad coders - what is API?
+-   방학동안 공부할 분야 선정
+    1. Java - 윤성우의 열혈자바
+    2. Java/spring framework - 인프런 김영한님
+    3. IT 직군에 필요한 영어지식 공부
+    4. Java학습과 더불어 알고리즘 파기 (신찬수 교수님 과목 예습 완료 후 백준 로드맵 짜기)
+    5. 시간 남으면 주식투자 자동 봇 만들기
+    6. 추가 예정.
+-   네이버 Tune CIC, 카카오 멜론 CIC 지원하기 위해 필요한 개발자 기술스택 정리
+
+````
+# ⛏️ Skills
+
+---
+
+## Backend
+
+- Java, Groovy, Node.js
+- Spring Boot, Spring MVC, Spring Batch, Spring Data JPA
+- JPA, Querydsl
+- Junit5, Junit4, Mockito, Spock
+- Gradle
+- IntelliJ, DataGrip, Visual Studio Code, Vim
+- Git, Sourcetree
+
+## DevOps
+
+- AWS EC2, S3, RDS, CloudFront, Route 53, CodeDeploy, Beanstalk
+- MySQL, MariaDB
+- Jenkins
+- Nginx, Tomcat
+- Pinpoint, ELK Stack
+
+## Frontend
+
+- HTML5, CSS3(SCSS), JS(ES6)
+- React
+- Vue.js
+- Typescript, Redux(React-redux, Redux-toolkit)
+
+## Collaboration
+
+- Jira & Wiki Confluence
+- Upsource
+- Slack
+```
+````
