@@ -138,3 +138,9 @@
 [ 20210501 ]
 
 -   nomad coders - library vs framework 개념정리
+
+[ 20210503 ]
+
+-   자료구조 이진탐색트리의 정의
+-   자료구조 이진탐색트리의 탐색 및 삭제연산
+-   coursera - Google IT Support 시작 (1주차 Introduction to IT Support - What is IT?)
