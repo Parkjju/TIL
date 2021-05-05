@@ -33,6 +33,7 @@
 -   [210430 / severless란?](https://github.com/Parkjju/TIL/blob/master/computer_science/serverless.md)
 -   [210501 / library vs framework](https://github.com/Parkjju/TIL/blob/master/computer_science/library.md)
 -   [210504 / API란?](https://github.com/Parkjju/TIL/blob/master/computer_science/api.md)
+-   [210505 / devops 정리](https://github.com/Parkjju/TIL/blob/master/computer_science/devops.md)
 
 ### 📔Python
 
