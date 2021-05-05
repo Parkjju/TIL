@@ -8,6 +8,8 @@
 
 ### 기록
 
+<details>
+<summary> 4월 </summary>
 [ 20210407 ]
 
 -   멋사 9기 세션 wireframe 툴 소개.
@@ -135,6 +137,11 @@
 -   멋사 classlion CSS - CSS 기초, 선택자, 값과 단위 수강 및 마크다운 정리
 -   nomad coders - 서버리스 개념 정리
 
+</details>
+
+<details>
+<summary> 5월 </summary>
+
 [ 20210501 ]
 
 -   nomad coders - library vs framework 개념정리
@@ -198,3 +205,10 @@
 - Slack
 ```
 ````
+
+[ 20210505 ]
+
+-   devops 개념 정리
+-   coursera - history of computer 수강
+
+</details>
