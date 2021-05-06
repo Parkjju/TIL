@@ -34,6 +34,8 @@
 -   [210501 / library vs framework](https://github.com/Parkjju/TIL/blob/master/computer_science/library.md)
 -   [210504 / API란?](https://github.com/Parkjju/TIL/blob/master/computer_science/api.md)
 -   [210505 / devops 정리](https://github.com/Parkjju/TIL/blob/master/computer_science/devops.md)
+-   [210506 / coursera - Introduction To IT : 1주차 Digital Logic](https://github.com/Parkjju/TIL/blob/master/computer_science/coursera/google-it-support/begin.md)
+-   [210506 / web요청과 응답과정](https://github.com/Parkjju/TIL/blob/master/computer_science/web_request.md)
 
 ### 📔Python
 
