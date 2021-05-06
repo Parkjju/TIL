@@ -211,4 +211,13 @@
 -   devops 개념 정리
 -   coursera - history of computer 수강
 
+[ 20210506 ]
+
+-   우아한 Tech - Web 요청 & 응답과정 개념 정리
+    -   인터넷, Web에 대한 개념
+    -   HTTP란
+    -   티스토리 예시를 통해 간단한 요청 및 응답과정 살피기
+-   coursera - Introduction to IT 1주차 - Digital Logic
+    -   문자 인코딩과 ASCII, 이진법 변환
+-   힙 구현하기 실습 - 구성 및 정렬
 </details>
