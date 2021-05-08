@@ -220,4 +220,9 @@
 -   coursera - Introduction to IT 1주차 - Digital Logic
     -   문자 인코딩과 ASCII, 이진법 변환
 -   힙 구현하기 실습 - 구성 및 정렬
+
+[ 20210508 ]
+
+-   공구 사이트 Madia designer채널 보며 클론 디자인해보기
+
 </details>
