@@ -224,5 +224,9 @@
 [ 20210508 ]
 
 -   공구 사이트 Madia designer채널 보며 클론 디자인해보기
+-   coursera - 컴퓨터구조 overview
+    -   이진수 실습
+    -   컴퓨터구조 요약 및 학습할 부분 확인
+    -   CS abstraction 개념
 
 </details>
