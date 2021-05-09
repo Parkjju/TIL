@@ -2,17 +2,19 @@
 
 ### 힙 성질을 만족하는 이진트리
 
--   리스트 H=[ a,b,c,None,d,e,f ] -> 자식노드가 없어도 공간을 차지한다고 생각.
+-   n개의 노드로 이루어진 이진트리 중 높이가 제일 작은 트리
+
+*   리스트 H=[ a,b,c,None,d,e,f ] -> 자식노드가 없어도 공간을 차지한다고 생각.
 
     -   H\[0\]의 왼쪽 자식노드 => H\[1\]
     -   H\[2\]의 오른쪽 자식 노드 => H\[2\*2+2\] (왼쪽 자식노드는 + 1)
 
--   일반화
+*   일반화
     -   H\[k\]의 왼쪽 자식노드 : H\[2\*k+1\]
     -   H\[k\]의 오른쪽 자식노드 : H\[2\*k+2\]
     -   H\[k\]의 부모노드 : H\[(k-1)//2\]
--   결론적으로, **자식노드와 부모노드를 상수시간에 계산해낼 수 있다**
--   단점) 3레벨의 자식노드들이 최 우측단 노드밖에 없다고 가정 -> 불필요한 메모리를 낭비하게 됨.
+*   결론적으로, **자식노드와 부모노드를 상수시간에 계산해낼 수 있다**
+*   단점) 3레벨의 자식노드들이 최 우측단 노드밖에 없다고 가정 -> 불필요한 메모리를 낭비하게 됨.
 
 **Heap 성질이란?**
 
@@ -87,7 +89,8 @@ heapify_down(k,n):
     -   -> h <= log(2)n
 
 -   heapify_down : O(h) -> O(logn)
--   make_heap : O(nh) -> O(nlogn) -> **실질적으로 O(n)에 수렴**
+-   make_heap : O(nh) -> O(nlogn) -> **실질적으로 O(n)에 수렴** (sigma i=0 to h, 2^i\*(h-i)) -> O(n)
+    -   make_heap 수행시간 -> sigma로 이루어진 수식을 멱급수 형태로 풀어주면 O(n)나옴
 
 ### insert와 delete_max 연산
 
@@ -131,6 +134,21 @@ delete_max:
     return key
 ```
 
+### Update_key 연산
+
+-   old_key와 new_key가 들어있는 인덱스를 어떻게 찾는가?
+-   애초에 데이터를 key와 index를 함께 저장
+-   dictionary를 통해 D\[key\]를 입력 -> index가 나오도록 저장
+
+```python
+# pseudo code
+def Update_key(self,old_key,new_key):
+    if old_key>new_key:
+        heapify_down(old_key)
+    if old_key<new_key:
+        heapify_up(old_key)
+```
+
 ### 연산 정리
 
 1. make_heap: O(n), O(nlogn) - insert n번 or heap 구축
@@ -149,13 +167,15 @@ delete_max:
     -   부모 노드의 key값이 자식 노드의 key값보다 작거나 같도록 정의!
     -   root node가 최소값이 될 것. -> delete_min, find_min 파생
 
--   **heap_sort?**
-    -   n개의 값을 받아서 heap으로 정렬
-    -   n번을 delete max하지만, **pop을 하지 않게 구현** -> 값을 잃지 않게 정렬만 진행함. (root와 최하단 leaf node의 swap으로 구현)
-    *   수행시간 O(nlogn)
+### heap_sort 알고리즘
 
-```text
-make_heap(n)
-for k in range(n):
-    delete_max(A)
+```python
+# pseudo code
+def sort(A):
+    n=len(A)
+    for i in range(n-1, 0, -1):
+        m, idx= get_max(A,i) # A[0]..A[i]까지 최대값 -> m에, 해당 인덱스는 m에 언패킹
+        A[idx], A[i] = A[i], A[idx]
 ```
+
+-   get_max에 heap 자료구조를 이용할 때 수행시간이 효율적으로 줄어들게 됨

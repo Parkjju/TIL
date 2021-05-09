@@ -270,3 +270,35 @@ def deleteByMerging(self,x):
 -   따라서 이진탐색트리에 있어서 insert, search, delete-merging and copying에 있어서 모두 최악의 경우 O(h)시간이 걸린다.
     -   이진 탐색트리의 h에 있어서 수행시간의 차이가 분명 존재할 것이다.
     -   h를 최소화 하도록 강제적으로 하는 이진탐색트리를 **balanced-binary tree**라고 함.
+
+#### 균형이진탐색트리 balanced-binary tree
+
+-   균형이진탐색트리 - 트리의 높이가 로그의 밑이 2인 logn만큼 비례되어 형성되는 트리
+
+-   트리의 높이를 줄이는 연산 - **Rotation - 회전** \* Right rotation - left subtree의 높이가 더 깊을때 진행.
+    <img src="images/right-rotation.jpg" height="60%" width="60%"/>
+
+-   rotateRight정의
+
+```python
+def rotateRight(self,z):
+    if not z:
+        return
+    x = z.left
+    if x==None:
+        return
+    b = x.right
+    x.parent = z.parent
+    if z.parent:
+        if z.parent.left == z:
+            z.parent.left = x
+        else:
+            z.parent.right = x
+    x.right = z
+    z.parent = x
+    z.left = b
+    if b:
+        b.parent = z
+    if self.root == z:
+        self.root = x
+```
