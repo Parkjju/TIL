@@ -234,4 +234,12 @@
 -   멋쟁이 사자처럼 UI디자인 중간점검 및 추가 계획
 -   BST rotation함수
 
+[ 20210510 ]
+
+-   classlion 위치와 관련된 프로퍼티
+    -   display
+    -   flexbox - container와 item 관계
+-   coursera - Introduction to Computer Hardware
+-   자료구조 AVL트리의 정의
+-   자료구조 AVL트리 insert, delete연산 강의 수강
 </details>
