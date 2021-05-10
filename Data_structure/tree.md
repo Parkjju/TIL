@@ -302,3 +302,97 @@ def rotateRight(self,z):
     if self.root == z:
         self.root = x
 ```
+
+#### AVL 트리 (Adelson-Velsky, Landis)
+
+-   AVL트리란? 모든 노드에 대해서 각 노드의 left subtree와 right subtree의 높이 차가 1이하인 BST
+-   AVL 트리는 n개의 노드에 대해서 항상 높이가 logn 시간으로 만들어지는가?
+
+-   proof
+    1. h = 0 AVL -> 루트노드가 AVL트리가됨
+    2. h = 1
+        - root - left, root - right, root - right & left
+        - 세 트리 모두 노드 수가 2,3개 이므로 logn 시간에 높이 형성
+    3. h = 2
+        - AVL정의에 입각하여 높이를 형성하여 확인해보기..
+    4. 높이의 일반화 -> 각 높이에 따라 노드 수가 최소인 경우를 생각
+        - 루트노드로부터 left subtree와 right subtree의 높이 차가 1인 경우
+        - N_h = 높이가 h인 AVL트리 중에서 최소 노드의 개수
+        - N_0 = 1, N_1 = 2, N_2 = 4, N_3 = 7
+        - N_h -> left subtree의 갯수 N_h-1 & right subtree의 갯수 N_h-2 => N_h = N_h-1 + N_h-2 + 1
+        - N_h >= 2\*N_h-2 + 1 >= 2\*N_h-2
+        - N_h >= 2\*N_h-2 >= 2\*(2\*N_h-4)
+        - ......
+        - 2^(h/2)\*N_0 = 2^(h/2)
+        - N_h >= 2^(h/2)
+-   결론 - 높이 h이고 노드 갯수가 n인 AVL트리를 가정
+    -   h <= c\*log2(n)을 증명?
+    -   n >= N_h >= 2^(h/2)
+    -   h/2 <= log2(n)
+    -   h <= 2\*log2(n) => h = O(log2(n))
+
+```python
+class Node:
+    # BST와 동일 + key, left, right, parent, height추가해야됨
+class BST:
+    #insert, deleteByMerging, search, deleteByCopying활용하는 BST 잘 이용하면됨.
+    #insert와 deleteBymerging&Copy는 height 변하는 노드에 대해 Update하도록 추가 구현 필요
+    # + insert및 delete시 AVL정의를 유지하지 못하는 경우에 대해 처리는 나중에
+class AVL(BST):
+    # BST상속 - git정리내용 참고
+    # init함수 없어도 됨 - BST클래스에서 구현해놓았기 때문
+    def insert(self, key):
+        v = super.(AVL,self).insert(key) # AVL클래스의 self객체에 대하여 부모 클래스의 메소드인 insert메소드를 호출해라~
+        # v의 삽입전, v의 삽입으로 인해 AVL정의가 무너지는 경우를 생각하자 - rebalance
+        # 1. find x,y,z -> 처음으로 AVL조건이 깨진 노드
+        w = rebalance(x,y,z)
+        if w.parent == None:
+            self.root = w
+
+```
+
+-   rebalance 이미지 - 신찬수교수님 유튜브 AVL강의
+    <img src="images/rotate.png" width="60%" height="60%"/>
+
+-   insert이후 rebalance 1회 또는 2회를 진행하면 AVL을 만족하게됨.
+-   AVL에서 insert 수행시간 -> super의 insert -> O(h) = O(logn)
+
+    -   find -> O(logn)
+    -   rebalance -> O(1)
+    -   self.root=w -> O(1)
+
+-   delete연산
+    <img src="images/delete.png" width="60%" height="60%"/>
+
+-   insert에서는 insert된 leaf node로부터 거슬러 올라가 rebalance를 진행했다면, delete는 삭제 이후 반대쪽 subtree(더 무거운 부트리)로부터 노드를 나눠받아 rebalance를 진행한다.
+-   delete 이후 rebalance를 진행하였는데, rebalance를 마친 후의 tree의 부모 노드 입장에서 AVL이 만족되지 않는 상황이 발생 (그림 3)
+    -   AVL 만족이 루트노드까지 이루어지는지 확인해야함.
+    -   insert에서 1회 및 2회에서 rebalance가 마무리지어진다면 O(1)
+    -   delete에서는 최악의 경우 높이만큼 rotation을 진행 O(logn)
+
+```python
+#pseudo code
+def delete(self,u):
+    v = super(AVL,self).deleteByCopying(u) # u라는 노드를 지우면, u노드 삭제 이후로 AVL조건이 꺠질 수 있는 가능성이 가장 큰 노드를 반환하도록 설계
+    while v!=None: #루프까지 AVL만족하도록 check
+        if v is not balanced:
+            z = v
+            if z.left.height >= z.right.height:
+                y = z.left
+            else:
+                y = z.right
+
+            if y.left.height >= y.right.height:
+                x = y.left
+            else:
+                x = y.right
+            # 여기까지 x-y-z관계가 설정됨
+            v = rebalance(x,y,z) # x-y-z가 일직선 연결 -> 1회 rotation, 중간에 구부러짐 -> 2회 로테이션, 그림에서는 그림 3의 y가 리턴됨
+            w = v
+            v = v.parent # 그림 3에서 w는 v로, y자리에 w가 있어야함. (수정.) w가 v를 한 자리 뒤에서 따라가는 형태
+```
+
+-   AVL정리
+    -   높이 <= 2logn => O(logn)
+    -   insert - 노드 삽입 O(logn) + rebalance(1회 및 2회) O(1) => O(logn)
+    -   delete - 노드 제거 O(logn) + rebalance(최악의 경우 O(logn)) => O(logn)
