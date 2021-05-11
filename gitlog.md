@@ -242,4 +242,17 @@
 -   coursera - Introduction to Computer Hardware
 -   자료구조 AVL트리의 정의
 -   자료구조 AVL트리 insert, delete연산 강의 수강
+
+[ 20210511 ]
+
+-   coursera - Introduction to Computer Hardware
+    -   Programs and Hardware
+        1. RAM
+        2. CPU
+        3. EDB
+        4. MCC
+        5. Cache
+        6. CPU clock, bus
+-   자료구조 힙 구현 과제 마무리
+
 </details>
