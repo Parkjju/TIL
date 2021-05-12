@@ -486,3 +486,68 @@ def delete(self,u):
     -   delete O(logn) 3
 
 -   [Red - Black트리 위키](https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC)
+
+#### 2,3,4트리 - Red Black트리와의 관계가 밀접한 트리
+
+-   2,3,4트리 조건
+    1. 자식노드의 개수가 2,3,4개중 하나
+    2. 모든 leaf node가 같은 level에 존재
+-   2-노드, 3-노드, 4-노드
+
+<img src="images/two.png" height="60%" width="60%" />
+
+-   노드 search방법
+
+    -   search(53) -> a <= b <= c인 자식 노드와 비교하면 됨. =>4갈래
+
+-   높이
+
+    -   root를 제외한 모든 자식노드가 4개인 경우 - log4(n)
+    -   root를 제외한 모든 자식노드가 2개인 경우 - log2(n)
+    -   h = O(log2(n))인 균형탐색트리 (**이진트리 아님!!**)
+
+-   insert(key)
+    -   search해나가다가, 삽입할 공간이 있으면 삽입
+    -   **4-노드를 만나면 split하면서 리프노드까지 내려감** - insert될 key가 search하려고 노드에 들어가봤더니 4-노드가 된 경우를 4-노드와 만났다고 표현
+    -   \[a,b,c\] 노드가 있을때, b를 부모로 보내고 a와 c로 쪼개는 연산이 split (one split -> O(1))
+    -   모든 level에서 split이 발생 -> h가 O(logn)이므로 insert연산도 O(logn)
+    -   루트노드가 4-노드가 되면 height가 증가하게됨.
+
+<img src="images/split.png" width="60%" height="60%" />
+
+-   delete(key)
+
+    -   [2-3-4 tree wiki 中 Deletion 발췌](https://en.wikipedia.org/wiki/2%E2%80%933%E2%80%934_tree)
+    -   삭제할 key값이 트리 내부에는 존재하는데, leaf node에 있을수도 없을수도 있다.
+    -   삭제할 key값이 leaf node에 없는 경우 successor연산을 통해 삭제 대상인 key값보다 큰 **바로 다음 수를 찾는다**
+    -   successor는 항상 leaf node에 있으며, successor가 없으면 key보다 작은 **바로 이전 수를 찾는다**
+    -   successor를 찾았으면 삭제 대상인 key값과 swap후 key를 삭제
+    -   어쨌든 key값을 가진 노드는 swap하던 원래 leaf node에 있던 leaf node에 있을 것이기 때문에 leaf node에 있다고 가정하자.
+
+-   delete의 경우, 사진에서 70key를 가진 노드를 지운다면 70의 부모인 80노드가 자식노드를 하나밖에 갖지 못한다. => **2-3-4 tree 정의에 위배**
+    -   삭제할 노드를 찾아 search하는 과정에서, 루프->리프까지 가는 동안 2-노드를 만나면 3-노드로 바꾼다 (그림 보고 흐름 이해해보기)
+    -   왼쪽 그림의 경우 30노드 기준 형제 노드로부터 자신을 3-노드로 바꿀 수 있게끔 노드를 꿔올 수 있는지 본다. -> 30노드 3-노드로 바꿔줌
+    -   오른쪽 그림의 경우 30노드 기준 형제 노드를 보니, 형제 노드들도 모두 2-노드여서 꿔올 수 없는 상황 => 부모의 key와 적당히 병합하여 3 or 4-노드로 만들어준다 -> **fusion**
+    -   root노드 입장에서 자식노드를 3 or 4노드를 만드는 연산은 없으며, root의 자식 노드 모두 2-노드라면 root와 자식노드들을 fusion한다! => height가 줄어듦
+
+<img src="images/deletetwo.png" height="60%" width="60%" />
+
+-   delete수행시간
+    -   fusion이 레벨마다 일어나면 -> O(logn)시간
+
+#### 2-3-4트리와 Red-black트리의 관계성
+
+-   [Converting a 2-3-4 tree into a red black tree](https://stackoverflow.com/questions/35955246/converting-a-2-3-4-tree-into-a-red-black-tree)
+-   2-3-4에서 Red-black으로
+
+    1. 2-node -> black으로
+    2. 3-node -> 2 level에 걸쳐서 쪼개기. 쪼갠 뒤 색 부여 (첫번째 레벨에 black, 두번째 레벨에 red)
+    3. 4-node도 2 level에 걸쳐 쪼개기 (첫번째 레벨에 black, 두번째 레벨에 red)
+
+    -   **만약, 3-node나 4-node가 red-black트리로 변환되면서 만들어내는 black노드의 수에 차이가 있다면, ex) 3-node는 1개 만들어내는데 4-node는 2개를 만들어낸다면, root로부터 쭉 내려올때 left subtree에 3-노드를 포함하고, right subtree에 4-노드를 포함하는 경우 red-black트리의 대전제를 깨게 됨**
+    -   3-node도, 4-node도 레드 블랙트리로 변환하면 레벨당 하나씩 블랙노드를 매핑하기때문에 문제가 발생하지 않음!!!
+
+-   2-3-4 tree의 높이를 h, 이에 대응되는 red-black tree의 높이를 h'이라고 하자
+    -   log4(n) <= h <= log2(n)임은 위에서 확인했었음.
+    -   높이가 h인 2-3-4트리를 red-black으로 대응시킬때, 최악의경우 2-3-4트리 모두가 3-node로 이루어져있는 것 -> 두 레벨로 쪼개져서 대응됨.
+    -   결론적으로, h' <= 2\*h가 되고, h' <= 2\*log3(n) = (2/log2(3))\*\*log2(n) = 1.261\*log2(n)
