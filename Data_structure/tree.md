@@ -121,7 +121,9 @@ class Node:
 -   상황가정) 이진트리의 모양을 모르는 상태.
     1. preorder : F B A D C E G I H
     2. inorder : A B C D E F G H I
--   이로부터 원래의 이진트리의 모양을 복원하는 작업 -> **reconstruct**
+-   이로부터 원래의 이진트리의 모양을 복원하는 작업 -> **reconstruct** - Inorder를 포함하여, preorder와 postorder 중 순서 개념을 알고 있는 상태로 이진트리 배열이 주어지면 reconstruct가 가능하다.
+
+*   위의 상황가정의 경우 reconstruct가 가능!!
 
 ### 이진 탐색 트리(Binary search Tree)
 
@@ -396,3 +398,91 @@ def delete(self,u):
     -   높이 <= 2logn => O(logn)
     -   insert - 노드 삽입 O(logn) + rebalance(1회 및 2회) O(1) => O(logn)
     -   delete - 노드 제거 O(logn) + rebalance(최악의 경우 O(logn)) => O(logn)
+
+#### Red-Black tree
+
+-   가장 유명하고 많이 사용되는 균형이진탐색트리.
+
+<img src="images/red-black.png" width="60%" height="60%"/>
+
+-   NIL노드 == NULL노드, NULL 안쪽 노드는 내부노드로 불림.
+
+-   특징
+
+    1. 노드들은 red or black의 색만 가진다.
+    2. root노드는 black이다.
+    3. leaf노드 (NULL노드)는 black이다
+    4. red노드는 두개의 자식노드를 가진다 (NULL 노드도 표기하기 때문) + red노드는 자식을 black만 가질 수 있다.
+    5. 각 노드에서 leaf노드로 가는 경로들 사이에 **거치는 black노드의 개수가 동일해야한다** - height가 평균 logn시간에 만들어진다는 것을 증명할 때 이용
+
+-   정의
+
+    -   h(v) = v의 높이 (height)
+    -   bh(v) = v에서 leaf까지 가는 동안 만나는 black노드의 갯수 **(v는 제외해야함.)**
+
+-   증명
+    1. v의 서브트리의 내부노드 갯수 >= 2^(bh(v)) - 1
+        - h(v)에 대한 귀납법을 통해 증명 (induction)
+        - Base case => h(v)=0 -> v의 내부노드 갯수 >= 2^0 - 1 => 성립
+        - Hypothesis phase => h(v) <= k에 대하여 **|v의 서브트리| >= 2^bh(v) - 1**임을 가정
+        - 귀납법 시작. -> h(v) = k + 1일때 **|v의 서브트리| >= 2^bh(v) - 1**이 성립함을 증명
+        - bh(w) & bh(z) = {bh(v) or bh(v-1)}
+            - pf) bh(v)로부터 w또는 z를 거쳐 만나는 black node의 수들을 생각하면, w또는 z가 black노드인 경우를 제외하면 만나는 black 노드의 수가 모두 동일하다.
+        - 따라서, |v의 subtree내부노드 수| >= 2^bh(w) - 1 + 2^bh(z) - 1 + 1 = 2^bh(v) - 1
+        - -> |v의 subtree의 내부노드 수| >= 2^bh(v) - 1임을 결국 증명!!!!
+    2. black 노드 수(root로부터 leaf까지 가는동안 만나는 black노드 수 - bh(root)) >= h/2 (red보다 black노드가 더 많을 수 없음. ) - red자식노드는 무조건 black 노드여야 하기 때문
+        - r의 subtree의 내부노드 개수 == 전체 red-black tree의 전체 노드 수 >= 2^bh(root) - 1 >= 2^(h/2) - 1
+        - n >= 2^(h/2) - 1
+        - h/2 <= log2(n+1) -> h <= 2log2(n+1)
+        - **결론** => h = O(log2(n)) => red-black노드는 BST이다 !!
+
+<img src="images/black-height.jpg" width="60%" height="60%"/>
+
+#### Red-Black트리의 삽입연산
+
+-   BST의 insert연산을 호출 - 새로운 노드를 삽입(x)
+-   x.color = red
+-   4가지 경우로 나누어 조정.
+
+<img src="images/rbinsert.png" height="60%" width="60%" />
+
+-   경우
+
+    1. empty red-black트리에 x를 삽입
+        - red로 삽입했던 x를 black으로 바꾸기 - x.color = black
+    2. x.parent.color == black
+        - do nothing
+    3. x.parent.color == red
+        1. x.uncle.color == red인 경우 (uncle => parent노드의 형제 노드)
+            - grandparent노드는 black이어야 함.(parent노드가 red인 상황이기때문)
+            - grandparent.color = red로 변경한 뒤 parent노드를 red에서 black, uncle노드를 red에서 black으로 바꾼다
+            - 색이 red으로 변한 grandparent입장에서, leaf까지 내려가는 동안 만나는 black노드의 수는 변하지 않는다 (원래 grandparent 자신에게 있던 black을 parent와 uncle에게 주었기 때문)
+            - 색이 black으로 변한 parent 입장에서, leaf까지 내려가는 동안 만나는 black노드의 수는 +1로 변한다.
+            - uncle도 parent와 마찬가지
+            - parent와 uncle입장에서 black노드의 개수가 증가했다고 해도, 전체적으로 보면 black노드 수가 동일하기 때문에 괜찮다
+        2. x.uncle.color == black인 경우
+            1. x - parent - grandparent : linear인 경우
+                - grandparent에서 right rotation을 진행
+                - grandparent의 색을 red로 변경 -> 색 조건 + 거쳐가는 black노드 수 동일
+            2. x- parent - grandparent : triangle인 경우
+                - parent에서 left rotation
+                - grandparent에서 right rotation
+                - grandparent를 red로 변경 -> 색 조건 + 거쳐가는 black 노드 수 동일
+
+-   수행시간
+
+    -   회전은 최대 2번 : O(1)
+    -   색깔을 조정 : O(1)
+    -   최종 O(logn) - BST class에서 가져온 insert 수행시간이 O(logn)이기 때문 !
+
+-   delete의 수행시간도 O(logn)에 가능하다.
+
+    -   회전 수는 상수이지만, deleteByMerging or copy연산 자체가 logn시간.
+
+-   AVL vs Red-Black rotation수
+
+    -   search - -
+    -   insert 2 2
+    -   delete O(logn) 3
+
+-   [Red - Black트리 위키](https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC)
