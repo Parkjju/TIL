@@ -37,6 +37,7 @@
 -   [210506 / web요청과 응답과정](https://github.com/Parkjju/TIL/blob/master/computer_science/web_request.md)
 -   [210506 / coursera - Introduction To IT : 1주차 Digital Logic](https://github.com/Parkjju/TIL/blob/master/computer_science/coursera/google-it-support/begin.md)
 -   [210510 / coursera - Introduction to Computer Hardware](https://github.com/Parkjju/TIL/blob/master/computer_science/coursera/google-it-support/Module-Introduction.md)
+-   [210514 / nomad coders 블록체인 시리즈 총정리](https://github.com/Parkjju/TIL/blob/master/computer_science/block-chain.md)
 
 ### 📔Python
 
