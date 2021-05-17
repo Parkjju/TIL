@@ -275,10 +275,28 @@
 -   프로젝트 와이어프레임 간단 정리
 -   가상화폐 기술 관련 세션 진행
 -   coursera - The modern computer - Components
-_ CPU
-_ Supplemental Reading for CPU architecture - 32bit vs 64bit.
-_ RAM
-_ Motherboards - 특징들
-_ Stoarge - 국제 표기법 이슈, 저장장치 타입 HDD,SDD, 하드디스크 인터페이스 SATA,PATA
-_ 관련 자료 서칭 및 정리
+    -   CPU
+    -   Supplemental Reading for CPU architecture - 32bit vs 64bit.
+    -   RAM
+    -   Motherboards - 특징들
+    -   Stoarge - 국제 표기법 이슈, 저장장치 타입 HDD,SDD, 하드디스크 인터페이스 SATA,PATA
+    -   관련 자료 서칭 및 정리
+
+[ 20210516 ]
+
+-   classlion 파이썬 기초 수강
+-   프로젝트 wireframe 구조 회의
+-   프로젝트 UI디자인 공유
+
+[ 20210517 ]
+
+-   coursera 2주차
+    -   power supplies
+    -   mobile devices
+    -   batteries and charging system (supplemental reading - inductive charging & How to maximize your batteries for iOS)
+    -   peripherals - USB, gigabit, display peripheral, supplemental reading -> USB
+    -   BIOS/UEFI - 정의 및 기능
+    -   CMOS
+    -   관련자료 서치-번역 및 정리
+
 </details>

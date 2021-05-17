@@ -189,26 +189,159 @@
         - 정보가 마이크로칩에 저장되어 HDD보다 훨씬 빠르게 데이터가 이동.
 
 -   ATA
-    _ 하드디스크 또는 CD-ROM장치 등을 연결하기 위한 인터페이스.
-    _ 최근 가장 인기 있는 ATA 인터페이스는 직렬 ATA이다. (Serial ATA - SATA)
-    _ SATA 드라이브는 핫 스왑이 가능하다.
-    _ 핫 스왑이란? 전원이 켜져있는(작동중인)시스템을 끄지 않고 부품을 교체할 수 있는 방식
-    _ 디스크 교체 이후 따로 설정이 필요 없이 바로 장치를 인식
-    _ 마더보드가 핫스왑 관련 기능을 지원해야하며, CMOS SETUP에서 하드디스크 작동모드를 AHCI로 설정해야함
-    _ [핫 스왑이란?](https://kk-7790.tistory.com/29)
-    _ [SATA컨트롤 모드 AHCI란?](https://blog.naver.com/jusk2/30115676964)
+
+    -   하드디스크 또는 CD-ROM장치 등을 연결하기 위한 인터페이스.
+    -   최근 가장 인기 있는 ATA 인터페이스는 직렬 ATA이다. (Serial ATA - SATA)
+    -   SATA 드라이브는 핫 스왑이 가능하다.
+    -   핫 스왑이란? 전원이 켜져있는(작동중인)시스템을 끄지 않고 부품을 교체할 수 있는 방식
+    -   디스크 교체 이후 따로 설정이 필요 없이 바로 장치를 인식
+    -   마더보드가 핫스왑 관련 기능을 지원해야하며, CMOS SETUP에서 하드디스크 작동모드를 AHCI로 설정해야함
+    -   [핫 스왑이란?](https://kk-7790.tistory.com/29)
+    -   [SATA컨트롤 모드 AHCI란?](https://blog.naver.com/jusk2/30115676964)
 
     > 인터페이스는 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다.
     > 즉, 사용자가 기기를 쉽게 동작시키는데 도움을 주는 시스템을 의미
 
 -   SATA가 오늘날 하드디스크에 대한 최근의 일반적인 인터페이스이다.
-    _ SATA케이블을 사용하는 것이 시장에 출시되는 초고속 SSD 중 일부에게는 충분하지 않음
-    _ 인터페이스가 최신 SSD속도를 따라가지 못해 NVMe(NVM Express)라는 또 다른 인터페이스가 등장함
-    _ 케이블 대신 드라이브를 확장 슬롯으로 추가하여 데이터 처리량을 높임
-    _ 여담이지만, 내 컴퓨터 드라이브 SSD256에 HDD 1테라가 SATA방식으로 연결되어 있음을 hwinfo 프로그램을 통해 확인할 수 있었다. (마더보드 플랫폼 - BGA방식)
-    <img src="../images/sata.png" height="40%" width="70%"/>
+    -   SATA케이블을 사용하는 것이 시장에 출시되는 초고속 SSD 중 일부에게는 충분하지 않음
+    -   인터페이스가 최신 SSD속도를 따라가지 못해 NVMe(NVM Express)라는 또 다른 인터페이스가 등장함
+    -   케이블 대신 드라이브를 확장 슬롯으로 추가하여 데이터 처리량을 높임
+    -   여담이지만, 내 컴퓨터 드라이브 SSD256에 HDD 1테라가 SATA방식으로 연결되어 있음을 hwinfo 프로그램을 통해 확인할 수 있었다. (마더보드 플랫폼 - BGA방식)
+        <img src="../images/sata.png" height="40%" width="70%"/>
 
 *   [kilobyte 추가자료](https://en.wikipedia.org/wiki/Kilobyte)
     -   이진수 기반의 컴퓨터 시스템 특성 상 2의 거듭제곱 형태를 수의 표현에서 많이 사용하게 되는데, 때마침 2의 10제곱이 1000과 비슷한 크기여서 1024바이트를 키로바이트로 나타내게 됨. (1000은 SI - 국제표기법상 접두어가 kilo로 붙음. 킬로그램!)
     -   SI표준에서 구분하여, 킬로바이트를 정확한 1000값으로 지정하였고 표준화 단체가 새롭게 제시한 KiB바이트가 2의 10제곱값인 1024로 이용하도록 용어의 변경을 추진하였다.
     -   대세는 아직도 킬로바이트 == 1024라고 하지만, 그래도 표준은 알아두자. 킬로, 메가, 기가 등은 모두 10제곱 기반이고, 키비, 메비, 기비 등이 모두 2의 거듭제곱 형태이다.
+
+### Power supplies
+
+-   AC & DC
+    -   AC(Alternative current) - 교류 : 주기적으로 전류 흐름의 방향이 바뀜
+    -   DC(Direct current) - 직류 : 전류의 흐름이 한 방향
+        -   컴퓨터는 DC전압을 사용
+        -   콘센트의 AC전압을 컴퓨터 내에서 저전압DC 전원으로 변환함.
+
+### Mobile Devices
+
+-   일반적으로 모바일 디바이스는 장치의 크기가 작으므로, 구성요소들이 통합되어있음
+    -   CPU, RAM, Motherboard가 분리할 수 없는 방식으로 구성됨
+    -   매우 작은 장치들에 대해 SoC(System on a chip)을 이용함
+    -   [wiki - SoC란?](https://ko.wikipedia.org/wiki/%EB%8B%A8%EC%9D%BC_%EC%B9%A9_%EC%B2%B4%EC%A0%9C)
+    -   SoC로 함께 구성된 컴포넌트는 분리되었을 때보다 배터리 전력 소모량이 적다.
+
+### Batteries and Charging System
+
+-   Rechargeable batteries
+
+    -   충전식 배터리는 한정적인 수명을 가지고, 이는 charge cycle이라는 단위로 측정된다.
+    -   1 charge cycle은 방전부터 완충까지 한번 이루어졌다는 뜻임
+    -   매우 춥거나 더운 환경에서 손상될 수 있음 (충전 또는 방전 시 손상)
+    -
+
+-   외부 전원으로부터 충전식 배터리로 전원을 공급하기 위해서 PSU(Power supply unit)과 유사한 충전 회로가 필요함
+
+    -   입력된 전력이 정상적인 출력 전력으로 변환 되도록 관리
+
+-   [supplemental readings for batteries and charging systems](https://en.wikipedia.org/wiki/Inductive_charging)
+    -   inductive charging (wireless charging or cordless charging) - 무선충전기
+        1. AC가 induction coil로 진입.
+        2. 전하가 움직여 자기장을 형성 (AC이기때문에 자기장의 변동) -> induction coil에도 AC가 형성
+        3. rectifier(정류기)를 통과하여 직류로 변환 -> 충전
+    -   [How to maximize your batteries for iOS](https://www.apple.com/batteries/maximizing-performance/)
+        1. Update to the latest software
+        2. Avoid extreme ambient temperatures (주변온도 -20~45도가 베스트)
+        3. Remove certain cases during charging. (충전 중 열 발산을 억제하지 않기 위해 케이스 제거)
+        4. Store it half-charged when you store it long term. - 완충 또는 방전을 지양하자
+
+### Peripherals
+
+-   peripheral? anything that you connect to your computer externally that adds functionality.
+
+-   USB(범용 직렬 버스, Universal Serial Bus)
+
+    -   USB 2.0 -> Transfer speed of 480 Mb/s **(Not megabytes, megabits)** // 일반적인 색 표기 - 검정
+    -   USB 3.0 -> Transfer speed of 5Gb/s // 파랑
+    -   USB 3.1 -> Transfer speed of 10Gb/s // 황색
+
+-   gigabits vs gigabytes
+
+    -   gigabytes 는 파일 크기를 측정할때 사용한다(GB, 대문자로 표기).
+    -   gigabits는 다운로드 및 업로드 속도를 측정하는 데 사용한다. (Gbps, b소문자로 & Mb/s - per second)
+    -   1MB 파일을 전송하기 위해서는 8Mb/s 전송속도가 적당함. (1바이트 -> 8비트)
+    -   일반적인 오해) 24Mb/s가 1초에 24MB를 다운 X -> 24Mb/s는 초당 3MB를 다운 -> 24MB를 받으려면 8초가 필요
+
+-   Display pheripheral
+
+    -   DVI 케이블 -> 일반적으로 비디오만 출력
+    -   HDMI & displayPort -> 비디오 및 오디오 출력(디스플레이 포트는 USB등의 다른 데이터 형식을 전송하는 데 사용되기도 함)
+    -   USB type C -> 오디오, 비디오 외에 전원까지도 공급해줌.
+
+-   [Wiki - USB](https://en.wikipedia.org/wiki/USB)
+
+-   supplemental reading for projectors
+    -   VGA,DVI,HDMI,displayPort와 같은 케이블들을 통해 프로젝터를 컴퓨터에 연결하면 OS가 새로운 디스플레이 연결을 인식한다.
+    -   [Ubuntu - connect another monitor to your computer](https://help.ubuntu.com/stable/ubuntu-help/display-dual-monitors.html)
+    -   프로젝터의 디스플레이 해상도를 PC가 올바르게 인식하지 못하면 낮은 해상도로 기본 설정될 수 있음 -> 프로젝터용 장치 드라이버 설치
+    -   이전의 프로젝터들은 incandescent(백열구) bulbs 기준으로 빛을 발산하였는데, 무리한 사용으로 온도가 높아지면 셧다운 되는 문제가 발생 -> 최근 프로젝터들은 LED 빛을 기반으로 작동
+
+## Starting It UP
+
+### BIOS
+
+-   프로그램이 실행되는 과정 -> 하드 - RAM - CPU로 이어지는 데이터 전송과정
+-   마우스 클릭이나 키보드 입력과 같은 것들은 CPU가 어떻게 처리하는가?
+
+    -   키보드 입력을 하면 CPU로 바이트만 전송된다.
+    -   본래 CPU는 해당 바이트를 어떻게 처리해야하는지 모르지만, **장치 드라이버** 설치를 통해 처리할 수 있게됨
+    -   서비스 & 드라이버 -> 외부 장치를 CPU가 이해하는 데 필요한 지침이 포함
+
+-   BIOS (Basic Input Output services)
+
+    -   firmware중 하나(하드웨어화된 소프트웨어. ROM 등에 기입하여 사용)
+    -   주변 장치와 컴퓨터 OS 사이의 데이터 흐름을 관리함
+    -   "Our CPU doesn't know that there is a device that it can talk to, so it has to connect to something called the BIOS." -> CPU에게 기본 입출력 장치에 대해 인지시킴
+    -   컴퓨터의 하드웨어를 초기화하고 운영체제를 가동하는 데에 도움이 되는 소프트웨어(펌웨어)
+    -   BIOS는 하드 드라이브에 저장되어있지 않고, 마더보드의 ROM chip에 저장되어있다.(Read-Only memory)
+    -   ROM -> non-volatile, 전원이 꺼져도 데이터가 삭제되지 않는 메모리
+    -   The BIOS is tasked with managing your computer’s exchange of inputs and outputs, mostly when you’re booting up your computer.
+    -   BIOS instructs your computer on how to boot up the operating system, and it also operates the peripherals (like the mouse and keyboard)
+    -   Pressing the power key is a basic input. Booting up your operating system is the basic output.
+
+-   input output 예시
+
+    -   CPU가 하드디스크로부터 소프트웨어를 검색하라고 명령 -> input
+    -   하드디스크로부터 소프트웨어를 찾아 CPU에게 다시 보냄 -> output
+    -   CPU가 프로그램을 돌려 그래픽 처리를 명령 -> input
+    -   그래픽 처리 후 모니터에게 픽셀 배열 instruction을 반환 -> output
+    -   모든 컴퓨터 작업을 입출력으로 요약할 수 있다. **BIOS는 바로 컴퓨터 부팅 시의 입출력 작업을 수행하는 것**
+
+-   UEFI
+
+    -   BIOS보다 최신버전의 펌웨어 (기능은 동일)
+    -   better compatibility(좋은 호환성) and support for newer hardware
+    -   컴퓨터 부팅시 삐 소리 -> 하드웨어 정상작동 여부 알리는 신호음 -> **POST, Power On Self Test**
+
+-   POST, Power On Self Test
+
+    -   BIOS가 하드웨어 초기화 또는 필수 드라이버 로드 전에 발생
+    -   만약 문제가 있는 상황(비디오 드라이버에 문제..) -> 표시할 방법이 없으므로 삐 소리를 모스코드와 비슷하게 발생시킴
+    -   제조업체마다 다르며, 기본적으로 두 번의 신호음 발생시 POST오류가 발생한 것
+
+-   CMOS battery
+
+    -   CMOS stands for “Complementary Metal Oxide Semiconductor.” The CMOS battery powers the BIOS firmware in your laptop.
+    -   BIOS needs to remain operational even when your computer isn’t plugged into a power source. That’s where the battery comes in. When your computer gets unplugged, BIOS relies on the CMOS battery for power.
+    -   전원이 연결되지 않은 상태에도 BIOS는 계속 작동해야함. 컴퓨터의 플러그를 뽑으면 전원 대신 BIOS가 CMOS배터리에 의존함. (데스크탑은 주로 전원이 연결된 상태이기때문에, CMOS가 자주 사용되는 곳은 laptop)
+    -   CMOS 배터리는 전원에 연결되면 자동으로 충전됨.
+    -   제조일 기준 2~10년의 수명을 가짐
+
+-   reimaging of a computer
+
+    -   "a disk image which is a copy of an operating system" - 운영체제의 복사본인 디스크 이미지
+    -   Reimaging is a recovery process that involves restoring a computer back to its factory settings. When you purchase a new computer, it typically comes with pre-installed software. Reimaging allows you to keep this software while deleting all other files on your computer.
+    -   OS도 삭제함. 외부 장치 (USB, CD-ROM)로부터 저장된 프로그램을 사용하여 수행
+    -   BIOS를 통해 외부 장치에서 부팅하도록 지시
+
+-   [What is a CMOS Battery? (BIOS에 대한 설명까지)](https://www.hp.com/us-en/shop/tech-takes/what-is-cmos-battery-how-to-remove-and-replace)
+    -   Every computer has BIOS pre-programmed into its hardware. OS와는 다르다. OS는 설치 삭제 업데이트가 가능하지만 BIOS는 컴퓨터에 합쳐진 채로 제조됨
