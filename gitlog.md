@@ -299,4 +299,11 @@
     -   CMOS
     -   관련자료 서치-번역 및 정리
 
+[ 20210518 ]
+
+-   coursera 3주차 : OS
+    -   SSH & VPN 정리
+
+*   자료구조 BST traversal,insert,delete by merging/copying 복습
+
 </details>
