@@ -260,9 +260,16 @@ def deleteByMerging(self,x):
 ```
 
 -   deleteByCopying
--   삭제할 x노드의 left subtree -> L, right subtree -> R
--   삭제할 x노드의 key값을, L의 가장 큰 key값으로 copy를 진행
--   이후 copy되었던 노드의 left subtree를 하나씩 끌어올려서 대체한다.
+
+    -   L이 존재
+        1. L에서 가장 큰 값을 갖는 노드 y를 찾는다
+        2. y의 key값을 x의 key값으로 카피
+        3. y의 left subtree가 존재하면, y의 위치로 올린다.
+    -   L이 존재하지 않고, R이 존재하는 경우
+        1. R에서 가장 작은 값을 갖는 노드 y를 찾는다
+        2. y의 key값을 x의 key값으로 카피한다.
+        3. y의 right subtree가 존재하면, y의 위치로 올린다.
+    -   삭제할 노드가 root인 경우
 
 -   **deleteByMerging, deleteByCopying 수행시간**
 
