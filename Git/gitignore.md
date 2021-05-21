@@ -16,3 +16,11 @@
     -   .gitignore -> git에서 없는 것으로 취급할 파일들이 적여있는 리스트
     -   사용중인 에디터, 프레임워크, 개발환경 등에 따라 ignore할 파일 목록이 다 같기때문에 이를 제공하는 ignore사이트가 뜸
     -   [gitignore.io](https://www.toptal.com/developers/gitignore)
+
+```bash
+$git add ha.md
+The following paths are ignored by one of your .gitignore files:
+ha.md
+```
+
+-   ha.md라는 파일 생성 및 ignore목록에 추가한 뒤(.gitignore 파일은 커밋상태) add 시도해보니 해당 메세지 출력됨
