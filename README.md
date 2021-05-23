@@ -147,6 +147,7 @@
 -   [210415 / 해시테이블 open addressing 실습](https://github.com/Parkjju/TIL/blob/master/Data_structure/open_addressing.md)
 -   [210413 / 트리 자료구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/tree.md)
 -   [210419 / heap 자료구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/heap.md)
+-   [210520 / union-find 자료구조](https://github.com/Parkjju/TIL/blob/master/Data_structure/union-find.md)
 
 ### 🔨Tools
 

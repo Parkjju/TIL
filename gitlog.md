@@ -306,4 +306,25 @@
 
 *   자료구조 BST traversal,insert,delete by merging/copying 복습
 
+[ 20210519 ]
+
+-   멋사 파이썬 세션 진행
+-   classlion - django setting
+    -   windows & MacOS 둘다 진행
+    -   Mac기준 터미널 사용 실습
+-   classlion - django MTV패턴 이해
+
+[ 20210520 ]
+
+-   union-find 자료구조 정리
+
+[ 20210521 ]
+
+-   gitignore정리
+-   자료구조 BST구현과제 함수구현까지
+
+[ 20210522 ]
+
+-   자료구조 BST과제 디버깅 및 최종마무리
+
 </details>
