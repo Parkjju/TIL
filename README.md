@@ -127,6 +127,7 @@
 -   [210308 / reset CSS](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/resetCSS.md)
 -   [210311 / CSS not, cursor, color상속하기, form action&method attribute](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssnot.md)
 -   [210319 / CSS box, test-transform, z-index, flex children, forwards animation, will change](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssbox.md)
+-   [210525 / CSS autocomplete, textarea - resize, div에 링크걸기](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/textarea.md)
 
 ### Javascript
 

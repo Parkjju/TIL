@@ -327,4 +327,10 @@
 
 -   자료구조 BST과제 디버깅 및 최종마무리
 
+[ 20210524 ]
+
+-   프로젝트 기능 구체화
+-   CSS textarea resize, autocomplete, div에 링크걸기
+-   TIL 웹사이트 상단 바 완성
+
 </details>
