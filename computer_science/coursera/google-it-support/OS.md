@@ -23,3 +23,5 @@
 -   원격 시스템에 연결 (2) -> VPN이용
     -   VPN (virtual private network) - 멀리 떨어진 네트워크 환경을 안전한 네트워크로 만드는 역할
     -   ex) 회사 내부에서만 접근가능한 네트워크를 집에서 접속하기 위해 VPN을 이용.
+
+### Remote Connections on Windows

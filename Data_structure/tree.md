@@ -271,6 +271,8 @@ def deleteByMerging(self,x):
         3. y의 right subtree가 존재하면, y의 위치로 올린다.
     -   삭제할 노드가 root인 경우
 
+*   삭제 및 연산수행을 진행할 때에 각 노드마다 height정보를 관리한다면 update해야하는 경우 생각하여 진행 (추가 및 삭제된 노드 대상과 관련된 노드만 확인하면됨)
+
 -   **deleteByMerging, deleteByCopying 수행시간**
 
     -   두 함수 모두 L, 즉 삭제할 x노드의 left subtree의 maximum key를 찾는 데에 가장 많은 시간을 사용한다.
