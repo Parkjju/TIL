@@ -199,7 +199,7 @@ def DFS(s):
   - ex) DFS 이미지에서 c - f - d 트리에서 f -> c로의 back edge가 존재
   - c - f - d 로 구성되는 cycle이 존재한다는 뜻.
 
-<img src="images/DFStree.png" height="30%" width="60$"/>
+<img src="images/DFStree.png" height="30%" width="60%"/>
 
 - pretime~post time 구간의 포함관계가 DFS tree를 구성한다.
 
