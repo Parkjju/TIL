@@ -7,7 +7,7 @@
 
 ### Graph에 등장하는 용어
 
-<img src="../images/graphDS.jpg" height="50%" width="50%"/>
+<img src="images/graphDS.jpg" height="50%" width="50%"/>
 
 1. vertex(정점) or Node
 2. 두 노드 또는 정점을 잇는 선 -> edge or link
@@ -37,7 +37,7 @@
 
 - n개의 노드가 존재하면, nXn 행렬을 생성한다.
 
-<img src="../images/graph_matrix.png" height="50%" width="50%"/>
+<img src="images/graph_matrix.png" height="50%" width="50%"/>
 
 - graph A
 
@@ -53,7 +53,7 @@
 
 - 인접 행렬의 경우 무방향 그래프에서 대칭 edge의 표현에 있어서 데이터 낭비가 존재함.
 
-<img src="../images/graph_list.png" height="50%" width="50%"/>
+<img src="images/graph_list.png" height="50%" width="50%"/>
 
 - 그림 참고
 
@@ -133,7 +133,7 @@ for each edge in G[u]:
 
 ### DFS순회방법
 
-<img src="../images/DFS.png" height="50%" width="50%" />
+<img src="images/DFS.png" height="50%" width="50%" />
 
 - a에서 DFS로 순회
 
@@ -199,7 +199,7 @@ def DFS(s):
   - ex) DFS 이미지에서 c - f - d 트리에서 f -> c로의 back edge가 존재
   - c - f - d 로 구성되는 cycle이 존재한다는 뜻.
 
-<img src="../images/DFStree.png" height="30%" width="60$"/>
+<img src="images/DFStree.png" height="30%" width="60$"/>
 
 - pretime~post time 구간의 포함관계가 DFS tree를 구성한다.
 
@@ -207,7 +207,7 @@ def DFS(s):
 
 - 선후 관계에 따라 상위노드로부터 데이터를 받는데, 하위 노드의 입장에서 자신의 모든 상위 노드가 일련의 처리 과정을 마쳐 자신에게 특정 데이터를 전달해주고 나서야 자신도 상위 입장의 노드가 되어 하위 노드에게 데이터 처리를 시작할 수 있게 된다.
 
-<img src="../images/topological.png" height="50%" width="50%"/>
+<img src="images/topological.png" height="50%" width="50%"/>
 
 - 선후 관계에 따라 일의 순서를 결정 -> topological sorting(위상정렬)
 - post time값이 가장 작은 값 -> 가장 먼저 처리가 끝나는 노드
