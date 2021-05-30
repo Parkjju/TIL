@@ -111,3 +111,106 @@ for each edge in G[u]:
   - **dense**의 경우는 edge의 개수가 n과 비교하여 큰 상황
 
 * 참고 - python의 리스트로 인접리스트를 구현하려면 순서에 구애받지 않기 위해 append함수를 사용해야함!!!!
+
+## 그래프 순회 (Graph Traversal) : DFS(Depth First Search)
+
+- 그래프의 순회 방법
+  1. DFS (깊이 우선 탐색)
+  2. BFS (너비 우선 탐색)
+
+1. DFS
+
+   - 알파벳을 노드의 값으로 갖는 graph가 존재한다고 가정.
+   - a와 인접한 노드들 중 특정 기준을 만들어 먼저 search할 노드를 선택하여 진행 (알파벳 사전편찬 순으로 진행한다고 가정)
+   - a와 b,c노드가 인접했다고 가정하면 a->b로 서치
+   - b에서 다시 b와 인접한 여러 노드들 중 기준에 맞으면서 search하지 않은 노드로 진행
+   - 끝까지 가서 더 이상 search할 노드가 존재하지 않으면 backtrack으로 search를 시작한 노드까지 이동
+   - backtrack은 역추적 진행하다가 인접한 노드들 중 search하지 않은 노드가 존재할 때 역추적 그만두고 다시 해당 인접노드로 search를 진행
+
+2. BFS
+   - a와 인접한 노드 b,c가 있으면, 해당 노드들을 모두 search한 뒤에 다음 레벨로 넘어가는 방식
+   - 모든 형제 노드들을 search
+
+### DFS순회방법
+
+<img src="../images/DFS.png" height="50%" width="50%" />
+
+- a에서 DFS로 순회
+
+  - a -> b -> c -> d -> f 이후 backtrack -> b까지 옴
+  - b -> e -> g 이후 backtrack
+  - b -> h 이후 backtrack하여 a까지 이동
+
+- code구현 -> recursive case
+
+```python
+#pseudo code
+global currentTime = 1
+
+def DFS(v):
+    mark[v] = "visited"
+    pre[v] = currentTime # pre[v]는 v의 첫번째 방문 시간
+    currentTime += 1
+    for each edge(v,w): # v에 인접한 모든 노드 w에 대해
+        if mark[w] != "visited":
+            parent[w] = v
+            DFS(w)
+    # v에 인접한 모든 노드를 고려한 상태이기 때문에 for loop를 탈출함
+    post[v] = currentTime # v에서 인접한 모든 노드를 방문 완료한 순간, v에서 DFS가 완료된 시간
+    currentTime+=1
+    # return
+
+def DFSALL(G): #그래프 G의 컴포넌트가 떨어져 있는 상황도 있음
+    for all nodes in G:
+        mark[v] = "unvisited"
+    for all nodes v:
+        if mark[v] != "visited":
+            DFS(v)
+```
+
+- DFS 함수 정의에 따라 도식화한 그림 -> Tree형태를 띰. -> DFS Tree (parent리스트를 통해 도식화)
+
+- pre,post time & parent list가 핵심
+- 추가적으로 DFSALL(G) : #graph G를 DFS search
+
+- code 구현 -> non recursive case
+  - 비재귀적 구현에서는 stack이 등장
+  - currentTime, pre&post time 정의는 직접 추가 필요
+
+```python
+def DFS(s):
+    stack.push((∅, s)) # ∅는 부모노드, s는 현재 방문노드
+    while stack is not empty:
+        p, v = stack.pop() # tuple형태로 stack에 저장하기 때문에 unpacking하여 p,v에 저장
+        if v is unmarked:
+            mark[v] = "visited"
+            parent[v] = p
+            for each edge(v,w):
+                if w is unmarked:
+                    stack.push((v,w)) # push또한 저장 기준에 입각하여 진행 - 사전편찬 순으로...예시
+                    # 먼저 방문이 진행되는 노드가 top에 오도록 push
+```
+
+- DFS tree의 경우 본 그래프에서 나타났던 모든 edge가 표기되지 않을 수 있음.
+
+  - DFS에서 나타나지 않은 edge -> back edge
+
+- back edge존재 의미
+  - ex) DFS 이미지에서 c - f - d 트리에서 f -> c로의 back edge가 존재
+  - c - f - d 로 구성되는 cycle이 존재한다는 뜻.
+
+<img src="../images/DFStree.png" height="30%" width="60$"/>
+
+- pretime~post time 구간의 포함관계가 DFS tree를 구성한다.
+
+### DAG (Directed Acyclic Graph) : 사이클이 없는 방향 그래프
+
+- 선후 관계에 따라 상위노드로부터 데이터를 받는데, 하위 노드의 입장에서 자신의 모든 상위 노드가 일련의 처리 과정을 마쳐 자신에게 특정 데이터를 전달해주고 나서야 자신도 상위 입장의 노드가 되어 하위 노드에게 데이터 처리를 시작할 수 있게 된다.
+
+<img src="../images/topological.png" height="50%" width="50%"/>
+
+- 선후 관계에 따라 일의 순서를 결정 -> topological sorting(위상정렬)
+- post time값이 가장 작은 값 -> 가장 먼저 처리가 끝나는 노드
+  - incoming만 있고 outgoing은 없는 노드.
+  - 위상정렬에 따라 가장 마지막에 위치해야함.
+  - 이후 post time 비교하며 차례로 배열 (post time가장 큰 값을 가진 노드가 가장 처음에 위치해야함)
