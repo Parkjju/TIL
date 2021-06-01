@@ -5,10 +5,8 @@
 - 원문
   > Unresolved import warnings
   > If you're getting a warning about an unresolved import, first ensure that the package is installed into your environment if it is a library (pip, pipenv, etc). If the warning is about importing your own code (and not a library), continue reading.
-
-The language server treats the workspace root (i.e. folder you have opened) as the main root of user module imports. This means that if your imports are not relative to this path, the language server will not be able to find them. This is common for users who have a src directory which contains their code, a directory for an installable package, etc. Note that the src scenario is automatically detected by the language server, so no configuration is necessary in that particular case.
-
-These extra roots must be specified to the language server. The easiest way to do this (with the VS Code Python extension) is to create a workspace configuration which sets python.analysis.extraPaths. For example, if a project uses a sources directory, then create a file .vscode/settings.json in the workspace with the contents:
+  > The language server treats the workspace root (i.e. folder you have opened) as the main root of user module imports. This means that if your imports are not relative to this path, the language server will not be able to find them. This is common for users who have a src directory which contains their code, a directory for an installable package, etc. Note that the src scenario is automatically detected by the language server, so no configuration is necessary in that particular case.
+  > These extra roots must be specified to the language server. The easiest way to do this (with the VS Code Python extension) is to create a workspace configuration which sets python.analysis.extraPaths. For example, if a project uses a sources directory, then create a file .vscode/settings.json in the workspace with the contents:
 
 1. 해당 경고 발생시 라이브러리를 import하는 경우 (pip, pipenv) 해당 라이브러리가 설치되어 있는지 확인
 2. 이번 troubleshooting은 개발자 자신의 코드를 직접 import해야하는데, unresolved 경고가 발생하는 경우에 해당
