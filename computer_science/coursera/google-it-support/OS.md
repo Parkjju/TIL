@@ -235,5 +235,3 @@
   - GNOME - Linux GUI환경
   - Ubuntu 보급회사인 canonical이 Unity를 Ubuntu 데스크톱의 default UI로 만든 지 6년만에 이를 그만두고 GNOME으로 전환할 예정
   - 모바일 시장으로의 적응에 실패했지만, IoT 및 cloud + Infrastructure부문에 투자중
-
-### What is Chrome OS?
