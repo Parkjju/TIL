@@ -58,3 +58,16 @@
     -   Major : breaking change
     -   Minor : backwards compatible new functionality, old functionality deprecated (but operational - 이전의 기능이 더이상 사용되지 않지만 작동은 가능), large internal refactor(리팩토링 - 외부 동작에 변화는 없지만 내부 구조의 개선)
     -   Patch : bug fixes
+
+### Recipe for Computing
+
+1. Assembly language
+    - punch cards를 통해 일련의 컴퓨팅 연산을 지시하던 것에 많은 피로감이 존재함. -> Assembly 언어의 개발
+    - human readable instructions, assembled into code that the machines could understand. Instead of generating binary code, computer scientists could program using machine instructions. (Add 1, Add 2....)
+    * 제아무리 human readable한 언어로 사용되었다고 하더라도, 여전히 기계적이었고 **특정 CPU에서 작성된 것은 해당 CPU에서만 또는 해당 CPU의 제품군에서만 구동될 수 있었다.** -> Compiled programming language의 개발 동기
+2. Compiled programming language
+    - uses human readable instructions, then **sends them through a compiler**
+3. Interpreted languages
+    - aren't compiled ahead of time. (미리 컴파일 되지 않음)
+    - Interpreted language로 작성된 파일 -> Script라고 불림
+    - The script is run by an interpreter, which interprets the code into CPU instructions just in time to run them.

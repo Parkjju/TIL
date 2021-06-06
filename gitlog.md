@@ -394,4 +394,10 @@
 
 -   software versioning
 
+[ 20210606 ]
+
+-   coursera
+    -   programming language 분류
+    -   interacting with software - managing software
+
 </details>
