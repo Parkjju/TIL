@@ -107,6 +107,7 @@
 -   [210322 / Python 문자열 자르고 합치기 - join, split함수](https://github.com/Parkjju/TIL/blob/master/Python/additional/join.md)
 -   [210323 / Python getitem, setitem 스페셜메소드](https://github.com/Parkjju/TIL/blob/master/Python/additional/getitem.md)
 -   [210601 / Pylance Unresolved import warnings 트러블슈팅](https://github.com/Parkjju/TIL/blob/master/Python/additional/pylance.md)
+-   [210607 / python django - How to add css to django application](https://github.com/Parkjju/TIL/blob/master/Python/additional/django-css.md)
 </details>
 
 ### 📔Git
