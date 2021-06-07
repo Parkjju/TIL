@@ -17,7 +17,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
     - html파일 맨 위에 작성 (DOCTYPE뒤에)
 
 ```html
-{% load staticfiles %}
+{% load static %}
 ```
 
 4. head태그에 템플릿 언어로 링크 추가
