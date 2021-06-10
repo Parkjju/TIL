@@ -16,3 +16,4 @@
 -   일차적으로 bootstrap 사용을 위해 import하는 CDN들을 먼저 배치하고 head태그 내에서 본인의 css링크를 후진배치하여 해결되었음
 -   후에 bootstrap의 CSS도 사용해야할 경우가 생기면 bootstrap의 CSS전부가 무시되는지는 확인해야함.
 -   JS는 문제없이 돌아갔음
+-   css property에 !important 추가도 가능
