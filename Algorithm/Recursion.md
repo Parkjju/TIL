@@ -43,3 +43,13 @@ def sum(a,b):
     -   c\*2^k + c(2^k-1) = c\*2^k + c\*2^k - c = 2c2^k - c, (2^k = n) = 2cn - c
 
 -   예시3)
+
+*   문자열 reverse함수를 재귀적으로 구현
+
+    -   reverse(A) = reverse() + A\[0\]
+    -   = reverse(A\[1:\]) + A\[:1\] => T(n) = T(n-1) + c = O(n)
+
+*   reverse(A, start, stop) = A\[start\] ... A\[stop-1\]
+    -   A\[stop-1\] ..... A\[start\], 가운데에는 reverse(A\[start+1\] ... A\[stop-2\]) = reverse(A, start+1, stop-2)
+    -   T(n) = T(n-2) + c
+    -   T(n) = T(1) + n/2 \* c = O(n)
