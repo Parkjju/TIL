@@ -23,8 +23,9 @@
 -   [5. CSS](#CSS)
 -   [6. Javascript](#Javascript)
 -   [7. Data structure](#Data-structure)
--   [8. Tools](#Tools)
--   [9. Projects](#Projects)
+-   [8. Algorithm](#Algorithm)
+-   [9. Tools](#Tools)
+-   [10. Projects](#Projects)
 
 ### 💻Daily CS
 
@@ -132,6 +133,8 @@
 -   [210311 / CSS not, cursor, color상속하기, form action&method attribute](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssnot.md)
 -   [210319 / CSS box, test-transform, z-index, flex children, forwards animation, will change](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/cssbox.md)
 -   [210525 / CSS autocomplete, textarea - resize, div에 링크걸기](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/textarea.md)
+-   [20210611 / CSS bootstrap 충돌문제](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/bootstrap.md)
+-   [20210611 / CSS bootstrap collapse 이용하여 토글 구현하기](https://github.com/Parkjju/TIL/blob/master/CSS/css_additional/collapse.md)
 
 ### Javascript
 
@@ -158,6 +161,8 @@
 ### Algorithm
 
 -   [20210607 / Bellman Ford & Dijkstra 최단경로](https://github.com/Parkjju/TIL/blob/master/Algorithm/shortest.md)
+-   [20210615 / all - to - all 최단경로](https://github.com/Parkjju/TIL/blob/master/Algorithm/all-to-all.md)
+-   [20210618 / Recursion 재귀](https://github.com/Parkjju/TIL/blob/master/Algorithm/Recursion.md)
 
 ### 🔨Tools
 
