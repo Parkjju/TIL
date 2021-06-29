@@ -38,3 +38,50 @@
   - ....n=33, round수 6번
   - log2(n)의 올림 수가 round 수
 - 최종 -> n - log2(n) (의 올림) - 2 => 해당 횟수는 upperbound와 lowerbound가 일치된다고 증명되어있음.
+
+## Quick Select
+
+- n개의 값중에서 k번째로 작은 수 찾기
+
+- 알고리즘 전개
+  1. L이라는 리스트에 n개의 값이 들어있음.
+  2. pivot을 고른다 - L 내에서 랜덤한 값
+  3. A = {p보다 작은 값들}, M = {p와 같은 값들}, B = {p보다 큰 값들} -> n-1번 비교
+  4. A의 개수를 비교.
+     1. if |A| > k -> A에서 k번째로 작은 값이 L에서 k보다 작은 값임. -> 재귀적 사고를 활용 (L = A)
+     2. elif |A| + |M| < k -> k번째로 작은 값은 B에 존재 -> **B의 입장에서는 k-|A|-|M|**번째의 값이 L에서 k번째 작은 값이 됨.
+     3. else -> M에 k번째 작은값이 존재. -> m은 pivot과 같은 값으로만 이어져있으므로, `return pivot`
+
+```python
+# pseudo code
+def quickSelect(L,k):
+    p = L[0]
+    A,B,M = [],[],[]
+    for x in L :
+        if x<p:
+            A.append(x)
+        elif x==p:
+            M.append(x)
+        else:
+            B.append(x)
+
+    if len(A) > k:
+        return quickSelect(A, k)
+    elif len(A) + len(M) < k:
+        return quickSelect(B, k-len(A)-len(M)) # 조심! B에 피봇이 존재해도 재귀적으로 구현
+    else:
+        return p
+    # 재귀적 호출이므로, pivot값이 재귀의 깊은 단계에서 리턴되었더라도 메모리에서 소멸되지 않음!!
+```
+
+- quickSelect worst case -> A든 B든, 피봇의 비교로 나뉘는 집합이 극단적으로 나뉘는 경우
+
+  - T(n) = T(n-1) + n = 1 + 2 + ... n = O(n^2)
+
+- quickSelect best case -> 피봇이 A와 B를 공평하게 나누는 경우
+
+  - T(n) = T(n/2) + n, let n = 2^k
+  - T(n/2) = T(n/4) + n/2
+  - ... 1 + ... n/4 + n/2 + n = n(1+1/2+1/4.....+1/2^k) <= 2n => O(n)
+
+- Average Case => O(n)
