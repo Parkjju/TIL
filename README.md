@@ -164,6 +164,7 @@
 - [20210615 / all - to - all 최단경로](https://github.com/Parkjju/TIL/blob/master/Algorithm/all-to-all.md)
 - [20210618 / Recursion 재귀](https://github.com/Parkjju/TIL/blob/master/Algorithm/Recursion.md)
 - [20210628 / 선택문제 - k번째로 작은 수. QuickSelection & MOM](https://github.com/Parkjju/TIL/blob/master/Algorithm/selection.md)
+- [20210701 / MOM - Median of Medians 알고리즘 설명 + 수행시간](https://github.com/Parkjju/TIL/blob/master/Algorithm/mom.md)
 
 ### 🔨Tools
 
