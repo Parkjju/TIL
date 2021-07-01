@@ -1,0 +1,36 @@
+# MOM (Median of Medians) 알고리즘
+
+- 기존 QuickSelect알고리즘은 평균 O(n)시간이지만, O(n^2)로 늘어날 수 있는 원인이 Pivot설정에 있다. (순전히 운에 맡기기 때문)
+
+- pivot을 어떻게 고르느냐?
+
+  - 리스트 A또는 B에 들어있는 값의 갯수가 n/c보다 작도록 pivot을 고르는것. (리스트 A는 피봇보다 작은 값들, B는 반대)
+  - n -> n/c -> .... -> n/(c^k) => logc(n)횟수만큼 재귀함수를 호출한다.
+
+- 비교횟수
+
+  1. pivot을 고르는 데에 필요한 비교횟수 p
+  2. 리스트 A와 B를 나누는 데에 필요한 횟수 (pivot과 리스트 A를 비교) -> n번
+  3. 최종 - logc(n) \* (p+n), 재귀함수 각 호출당 p+n, 전체 재귀함수 호출횟수 logc(n)
+
+  - -> O(nlogn)을 보장하게됨.
+
+- MOM (Median of Medians) 알고리즘 - 피봇을 잘 고르자 !!
+
+  1. L : n개의 숫자 , `MOM(L, k)`, k는 index
+  2. 5개씩 group -> 그룹 수는 약 n/5
+  3. 각 그룹의 중간값을 구한다. -> 상수시간에 가능 (약 6번) => 약 (5/n)\*6 횟수만큼 비교
+  4. 각 그룹의 중앙값들을 한 리스트에 모아준 다음 해당 리스트의 중앙값을 다시 구한다.
+  5. m* = MOM(medians, |medians|/2), m*는 피봇
+  6. A m* B, n번 비교하여 A,B,m*구성
+  7. 이후로는 QuickSelect과 동일하며, 재귀함수는 MOM을 호출하면된다.
+
+- 호출횟수 T -> T(|A|) or T(|B|)
+
+  - T(|A|) <= T(n/c) , T(|B|) <= T(n/c)
+  - 점화식 T(n) = 6n/5 + T(n/5) + n + T(n/c)
+  - 11n/5 -> 그룹을 만들어서 median 구함, T(n/5) -> 각 그룹의 median of median을 구하는 횟수, T(c/n) -> A, m\*, B에서 k번째로 작은 값을 찾는 횟수
+
+- Todo -> |A|<=n/c, |B|<=n/c임을 증명해야함!
+
+<img src="images/cproof.jpg" height="60%" width="40%"/>
