@@ -400,4 +400,8 @@
     -   programming language 분류
     -   interacting with software - managing software
 
+[ 20210715 ]
+
+-   jekyll 개발 완료
+
 </details>
